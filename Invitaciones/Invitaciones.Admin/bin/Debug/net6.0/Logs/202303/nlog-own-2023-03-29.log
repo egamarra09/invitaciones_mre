@@ -1,0 +1,70 @@
+2023-03-29 07:44:54.6308||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 07:53:06.0118||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 08:33:25.8082||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 09:54:50.6303||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 18:21:33.8335||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 18:56:46.4363||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 19:00:18.3147||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 19:01:45.9341||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 19:07:39.0177||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 19:11:45.2626||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 21:34:27.2642||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 21:42:52.3109||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 21:47:00.1096||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 21:55:32.5116||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 22:42:42.5602||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 22:48:09.7065||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 23:16:14.9828||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-29 23:17:11.2807||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+IronBarCode must be licensed for deployment outside of the Visual Studio development environment.https://ironsoftware.com/csharp/barcode/licensing/ IronSoftware.Exceptions.LicensingException: IronBarCode must be licensed for deployment outside of the Visual Studio development environment.https://ironsoftware.com/csharp/barcode/licensing/
+   at .( , String )
+   at IronBarCode.GeneratedBarcode..ctor( MyBarcode)
+   at IronBarCode.QRCodeWriter.CreateQrCodeUtility(String Value, Byte[] BinaryData, QRCodeLogo QRCodeLogo, QrErrorCorrectionLevel ErrorCorrection, Int32 Width, Int32 Height, Int32 QrVersion)
+   at IronBarCode.QRCodeWriter.CreateQrCode(String Value, Int32 Size, QrErrorCorrectionLevel ErrorCorrection, Int32 QrVersion)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Enviar(IFormCollection fc) in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\EventoInvitacionesController.cs:line 183 
+ --- |url: https://localhost/EventoInvitaciones/Enviar/9|action: Enviar
+2023-03-29 23:17:11.4707||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+IronBarCode must be licensed for deployment outside of the Visual Studio development environment.https://ironsoftware.com/csharp/barcode/licensing/ IronSoftware.Exceptions.LicensingException: IronBarCode must be licensed for deployment outside of the Visual Studio development environment.https://ironsoftware.com/csharp/barcode/licensing/
+   at .( , String )
+   at IronBarCode.GeneratedBarcode..ctor( MyBarcode)
+   at IronBarCode.QRCodeWriter.CreateQrCodeUtility(String Value, Byte[] BinaryData, QRCodeLogo QRCodeLogo, QrErrorCorrectionLevel ErrorCorrection, Int32 Width, Int32 Height, Int32 QrVersion)
+   at IronBarCode.QRCodeWriter.CreateQrCode(String Value, Int32 Size, QrErrorCorrectionLevel ErrorCorrection, Int32 QrVersion)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Enviar(IFormCollection fc) in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\EventoInvitacionesController.cs:line 183 
+ --- |url: https://localhost/EventoInvitaciones/Enviar/9|action: Enviar
+2023-03-29 23:46:26.2211||DEBUG|Program 
+init main  
+ --- |url: |action: 

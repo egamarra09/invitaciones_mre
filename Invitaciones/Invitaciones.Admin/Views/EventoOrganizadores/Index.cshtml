@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Invitaciones.Shared.Data.EventoOrganizadore>
+
+@{
+    ViewData["Title"] = "Index";
+    MenuModel mm = ViewBag.MenuMod;
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col">
+                <h3 class="card-title">Eventos Organizadores</h3>
+            </div>
+           @* <div class="col text-right">
+                <a class="btn btn-secondary" href="/menus/create">Agregar Nuevo</a>
+            </div>*@
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12" id="partial">
+                @await Html.PartialAsync("~/Views/EventoOrganizadores/create.cshtml", mm)
+            </div>
+        </div>
+          <div class="row mt-3 mb-3">
+            @*<div class="col-md-6">
+                <input type="text" id="usuario" name="usuario" placeholder="Filtrar " autocomplete="off" class="form-control" />
+            </div>*@
+        </div>
+        <div class="table-responsive">
+            <table id="tbUsuarios" class="table ">
+                <thead>
+                    <tr>
+                        <th>Modificar</th>
+                      <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Activo)
+                        </th>
+                        @*<th></th>*@
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model) {
+                        <tr>
+                            <td><button onclick="edit(@item.IdOrganizador)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="/EventoOrganizadores/DeleteConfirmed/@item.IdOrganizador" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
+                           <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Activo)
+                            </td>
+                           @* <td>
+                                <a asp-action="Edit" asp-route-id="@item.IdMenu"><i class="fa fa-pen"></i></a> |
+                                <a asp-action="Details" asp-route-id="@item.IdMenu"><i class="fas fa-eye"></i></a> |
+                                <a asp-action="Delete" asp-route-id="@item.IdMenu"><i class="fas fa-trash"></i></a>
+                            </td>*@
+                        </tr>
+                }
+                    </tbody>
+                </table>
+        </div>
+
+</div>
+</div>
+ @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+         $(document).ready(function(){
+          $("#usuario").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tbUsuarios tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+           $('#tbUsuarios').DataTable({
+              "paging": true,
+              "lengthChange": false,
+              "searching": true,
+              "ordering": true,
+              "info": false,
+              "autoWidth": false,
+              "responsive": true,
+              "language": {
+                "paginate": {
+                  "previous": "anterior",
+                   "next": "siguiente"
+                },
+                "search": "Filtrar:"
+              }
+            });
+        });
+    </script>
+    
+}
+ <script>  
+       function edit (id) {  
+           $("#partial").load("@Url.Content("~")/EventoOrganizadores/edit/"+id);
+        } 
+ </script>  

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>V:\EVENTOS</_PublishTargetUrl>
+    <History>True|2023-03-31T15:03:01.4249981Z;False|2023-03-31T10:24:42.7289235-04:00;False|2023-03-31T10:24:12.7776176-04:00;False|2023-02-21T14:09:15.9473515-03:00;False|2023-02-21T14:08:04.1443372-03:00;False|2023-02-21T14:07:04.2634572-03:00;False|2023-02-21T14:06:21.2258187-03:00;False|2023-02-21T14:03:23.0265325-03:00;False|2023-02-21T14:00:57.9383330-03:00;False|2023-02-21T13:49:30.9174053-03:00;False|2023-02-21T13:47:52.7789417-03:00;False|2022-09-14T07:47:22.7268851-04:00;False|2022-09-14T07:38:57.7389581-04:00;False|2022-09-14T07:36:10.3825539-04:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

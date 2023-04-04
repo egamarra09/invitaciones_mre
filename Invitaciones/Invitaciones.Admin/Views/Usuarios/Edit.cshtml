@@ -1,0 +1,71 @@
+﻿@model Invitaciones.Shared.Data.Usuario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+@*<div class="card ">
+<div class="card-header">
+    <h3 class="card-title">Usuario</h3>
+</div>*@
+        <form asp-action="Edit">
+            <div class="row">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="IdUsuario" />
+                <div class="form-group col-md-6">
+                    <label asp-for="IdUsuarioTipo" class="control-label"></label>
+                    <select asp-for="IdUsuarioTipo" class ="form-control" asp-items="ViewBag.IdUsuarioTipo" required >
+                        <option value="">Seleccionar</option>
+                    </select>
+                </div>
+                
+                <div class="form-group col-md-6">
+                    <label asp-for="Login" class="control-label"></label>
+                    <input asp-for="Login" class="form-control" required />
+                    <span asp-validation-for="Login" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Nombres" class="control-label"></label>
+                    <input asp-for="Nombres" class="form-control" required />
+                    <span asp-validation-for="Nombres" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Apellidos" class="control-label"></label>
+                    <input asp-for="Apellidos" class="form-control" required />
+                    <span asp-validation-for="Apellidos" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group ">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" required />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="align-bottom col-md-12">
+                    <div class="form-group col-md-6 form-check ">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Activo" /> @Html.DisplayNameFor(model => model.Activo)
+                        </label>
+                     </div>
+                </div>
+               @* <div class="form-group">
+                    <label asp-for="FechaCreacion" class="control-label"></label>
+                    <input asp-for="FechaCreacion" class="form-control" />
+                    <span asp-validation-for="FechaCreacion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UltimaModificacion" class="control-label"></label>
+                    <input asp-for="UltimaModificacion" class="form-control" />
+                    <span asp-validation-for="UltimaModificacion" class="text-danger"></span>
+                </div>*@
+              <div class="card-footer">
+                         <input type="submit" value="Guardar" class="btn btn-primary" />
+                         <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </div>
+        </form>
+ @*   </div>*@
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,56 @@
+﻿@{
+
+    Layout = null;
+
+}
+
+ 
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Dropzone Example ASP.NET Core.</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    @*<link href="../dropzone/dist/min/dropzone.min.css" rel="stylesheet">*@
+
+</head>
+
+<body>
+
+    <form id="form2" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+
+        <div class="form-group">
+
+            <label class="control-label col-md-2" for="first-name">
+
+                Upload Photo <span class="required">*</span>
+
+            </label>
+
+            <div class="col-md-6" id="dropzone">
+
+                <div action="/eventos/Upload" class="dropzone" id="uploader">
+
+                    Drop files here or click to upload.<br>
+
+                </div>
+
+            </div>
+            <button type="submit">upload</button>
+        </div>
+
+    </form>
+
+</body>
+
+  <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
+</html>

@@ -1,0 +1,69 @@
+2023-03-15 17:58:58.3683||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-15 22:39:09.3173||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-15 22:42:33.8554||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-15 22:46:13.4275||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-15 22:47:05.7476||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Mail(EmailModel model) in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\EventoInvitacionesController.cs:line 370
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Enviar(IFormCollection fc) in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\EventoInvitacionesController.cs:line 181 
+ --- |url: https://localhost/EventoInvitaciones/Enviar/1|action: Enviar
+2023-03-15 22:47:54.2824||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Mail(EmailModel model) in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\EventoInvitacionesController.cs:line 370
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Enviar(IFormCollection fc) in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\EventoInvitacionesController.cs:line 181 
+ --- |url: https://localhost/EventoInvitaciones/Enviar/1|action: Enviar
+2023-03-15 22:49:57.6671||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Mail(EmailModel model)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Enviar(IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Enviar/1|action: Enviar
+2023-03-15 22:50:00.4354||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Mail(EmailModel model)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Enviar(IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Enviar/1|action: Enviar
+2023-03-15 22:50:58.4125||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Mail(EmailModel model)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Enviar(IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Enviar/1|action: Enviar
+2023-03-15 22:51:02.6365||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Mail(EmailModel model)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Enviar(IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Enviar/1|action: Enviar
+2023-03-15 22:54:28.7563||DEBUG|Program 
+init main  
+ --- |url: |action: 

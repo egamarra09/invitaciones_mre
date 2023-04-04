@@ -1,0 +1,31 @@
+﻿@model Invitaciones.Shared.Data.Evento
+
+@{
+    ViewData["Title"] = "Evento";
+}
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <img src="/archivos/evento.jpg" class="img-fluid" />
+            </div>
+        </div>
+      <div class="row">
+        <div class="col-sm-8"><p><h3>@Html.DisplayFor(model => model.Evento1)</h3></p></div>
+   @*     <div class="col-sm-8 mt-3">@Convert.ToDateTime(Model.FechaDesde).ToString("dd/MM/yyyy")</div>*@
+         <div class="col-sm-8 mt-3">@Html.DisplayFor(model => model.Descripcion)</div>
+         
+      </div>
+      <div class="row">
+          <div class="mt-3">
+
+                <a asp-action="Index" class="btn btn-primary">Volver</a>
+            </div>
+      </div>
+</div>
+    
+
+

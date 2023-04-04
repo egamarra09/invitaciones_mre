@@ -1,0 +1,77 @@
+2023-04-03 21:16:16.0019||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:07:32.8232||ERROR|Invitaciones.Admin.Controllers.EventoOrganizadoresController 
+An error occurred while saving the entity changes. See the inner exception for details. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): No se puede insertar el valor NULL en la columna 'nombre', tabla 'Invitaciones.dbo.Evento_Organizadores'. La columna no admite valores NULL. Error de INSERT.
+Se terminó la instrucción.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1d96d539-4fb3-446f-be69-e22671652d48
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Invitaciones.Admin.Controllers.EventoOrganizadoresController.Create(EventoOrganizadore eventoOrganizadore) 
+ --- |url: https://localhost/EventoOrganizadores/Create|action: Create
+2023-04-03 22:15:55.1090||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:18:36.7722||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:30:43.8797||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:34:57.5561||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:37:49.6576||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:38:41.9213||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:43:09.1578||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:44:31.3287||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:50:29.4121||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 22:58:45.9450||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 23:04:11.7725||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 23:05:02.0503||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 23:06:55.2188||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 23:10:59.6738||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-04-03 23:15:46.7280||DEBUG|Program 
+init main  
+ --- |url: |action: 

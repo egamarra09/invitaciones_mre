@@ -1,0 +1,134 @@
+﻿@model Invitaciones.Shared.Data.EventoInvitacione
+
+@{
+	ViewData["Title"] = "Create";
+	var invitado = ViewData["Invitado"] as Invitaciones.Shared.Data.EventoInvitado;
+}
+<head>
+	<!-- Google Font: Source Sans Pro -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<!-- Tempusdominus Bootstrap 4 -->
+	<link rel="stylesheet" href="/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+	<!-- iCheck -->
+	<link rel="stylesheet" href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+	<!-- JQVMap -->
+	<link rel="stylesheet" href="/plugins/jqvmap/jqvmap.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="/dist/css/adminlte.min.css">
+	<!-- overlayScrollbars -->
+	<link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+	<!-- Daterange picker -->
+	<link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker.css">
+	<!-- summernote -->
+	<link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
+	<link rel="stylesheet" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="/plugins/fullcalendar/main.css">
+	<style type="text/css" media="print">
+		@@page {
+			size: auto; /* auto is the initial value */
+			margin: 0mm; /* this affects the margin in the printer settings */
+		}
+	</style>
+</head>
+@*<h1>Create</h1>
+
+<h4>EventoInvitacione</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">*@
+<body>
+	<form asp-action="Create">
+		<div class="row">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="col-md-12 text-center">
+				<img src="/dist/img/logo_invitaciones.png" class="image-responsive" />
+			</div>
+			<div class=" col-md-12 text-center mt-3">
+				<h3>@Html.Raw(Model.Remitente)</h3>
+			</div>
+			<div class=" col-md-12 text-center">
+				<p> @Html.Raw(Model.Saludo)</p>
+			</div>
+			<div class=" col-md-12 text-center">
+				<h3>
+					<p> @Html.Raw(invitado.IdPersonaNavigation.Trato + " " + invitado.IdPersonaNavigation.Nombre + " " + invitado.TextoAdicional )</p>
+
+				</h3>
+			</div>
+			<div class=" col-md-12 text-center">
+
+				@Html.Raw(Model.Motivo)
+
+			</div>
+			<div class=" col-md-12 text-center">
+
+				@Html.Raw(Model.Fecha)
+
+			</div>
+			<div class=" col-md-6 text-left">
+
+				@Html.Raw(Model.Lugar)
+				<br />
+				@Html.Raw(Model.Direccion)
+				<br />
+				@Html.Raw(Model.Tenida)
+			</div>
+			<div class=" col-md-6 text-right">
+
+				@Html.Raw(Model.TextConf)
+				@if (Model.TipoConf == "2")
+				{
+					<a href='@ViewData["Front"]/confirmacion?id=@invitado.Token' target="_blank">enlace confirmación</a>
+					@*<a href='#' onclick="redirect('@invitado.Token')">enlace confirmación</a>*@
+				}
+				else if (Model.TipoConf == "3")
+				{
+
+
+					<div class="float-right" style="width:150px" id="qr"></div>
+				}
+			</div>
+		</div>
+	</form>
+</body>
+
+
+@*    </div>
+</div>*@
+
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/dist/js/jquery.qrcode.js"> </script>
+<script src="/dist/js/qrcode.js"> </script>
+<script>
+
+	$(document).ready(function () {
+
+		// Denotes total number of rows
+
+
+		// jQuery button click event to add a row
+		//window.print();
+		//alert()
+		jQuery('#qr').qrcode({
+			text: "http://localhost:7006/confirmacion/@invitado.Token",
+			width: 150,
+			height: 150,
+			render: "table"
+		}
+		);
+	});
+	function edit(id) {
+		$("#partial").load("@Url.Content("~")/EventoInvitaciones/print/" + id);
+	}
+	function redirect(id) {
+		window.location = "https://localhost:7006/confirmacion?id=" + id;
+	}
+</script>
+
+@*<script>
+  window.addEventListener("load", window.print());
+</script>*@

@@ -1,0 +1,47 @@
+2023-03-05 22:31:56.7479||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-05 22:44:05.5930||ERROR|MRE_Invitaciones.Controllers.HomeController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.HomeController.Index() 
+ --- |url: https://localhost/|action: Index
+2023-03-05 22:44:49.9228||ERROR|MRE_Invitaciones.Controllers.HomeController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.HomeController.Index() 
+ --- |url: https://localhost/|action: Index
+2023-03-05 22:45:12.2957||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-05 22:45:31.4130||ERROR|MRE_Invitaciones.Controllers.HomeController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.HomeController.Index() in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\HomeController.cs:line 48 
+ --- |url: https://localhost/|action: Index
+2023-03-05 22:46:03.4642||ERROR|MRE_Invitaciones.Controllers.HomeController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.HomeController.Index() 
+ --- |url: https://localhost/|action: Index
+2023-03-05 22:48:15.1776||ERROR|MRE_Invitaciones.Controllers.HomeController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.HomeController.Index() 
+ --- |url: https://localhost/|action: Index
+2023-03-05 22:48:40.8733||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-05 22:48:45.9815||ERROR|MRE_Invitaciones.Controllers.HomeController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.HomeController.Index() in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\HomeController.cs:line 48 
+ --- |url: https://localhost/|action: Index
+2023-03-05 22:49:10.8095||ERROR|MRE_Invitaciones.Controllers.HomeController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.HomeController.Index() in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\HomeController.cs:line 48 
+ --- |url: https://localhost/|action: Index
+2023-03-05 22:49:48.2332||ERROR|MRE_Invitaciones.Controllers.HomeController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.HomeController.Index() in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\HomeController.cs:line 48 
+ --- |url: https://localhost/|action: Index
+2023-03-05 22:52:55.9256||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-05 23:06:25.9350||DEBUG|Program 
+init main  
+ --- |url: |action: 

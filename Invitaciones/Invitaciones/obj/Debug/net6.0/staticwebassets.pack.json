@@ -1,0 +1,609 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Invitaciones.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Invitaciones.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\archivos\\evento.jpg",
+      "PackagePath": "staticwebassets\\archivos\\evento.jpg"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\archivos\\logo_invitaciones.png",
+      "PackagePath": "staticwebassets\\archivos\\logo_invitaciones.png"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales-all.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales-all.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales-all.min.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales-all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\af.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\af.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ar-dz.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ar-dz.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ar-kw.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ar-kw.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ar-ly.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ar-ly.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ar-ma.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ar-ma.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ar-sa.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ar-sa.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ar-tn.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ar-tn.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ar.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\az.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\az.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\bg.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\bn.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\bn.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\bs.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\bs.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ca.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\cs.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\cy.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\cy.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\da.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\de-at.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\de-at.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\de.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\el.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\en-au.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\en-au.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\en-gb.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\en-gb.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\en-nz.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\en-nz.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\eo.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\eo.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\es-us.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\es-us.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\es.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\et.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\eu.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\fa.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\fi.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\fr-ca.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\fr-ch.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\fr-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\fr.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\gl.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\he.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\hi.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\hi.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\hr.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\hu.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\hy-am.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\hy-am.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\id.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\is.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\is.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\it.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ja.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ka.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ka.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\kk.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\kk.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\km.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\km.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ko.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ku.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ku.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\lb.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\lb.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\lt.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\lv.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\mk.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\mk.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ms.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ms.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\nb.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\nb.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ne.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ne.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\nl.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\nn.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\nn.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\pl.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\pt-br.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\pt-br.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\pt.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ro.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ru.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\si-lk.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\si-lk.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\sk.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\sl.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\sm.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\sm.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\sq.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\sr-cyrl.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\sr.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\sv.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ta-in.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ta-in.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\th.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\tr.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\ug.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\ug.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\uk.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\uz.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\uz.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\vi.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\zh-cn.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\locales\\zh-tw.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\locales\\zh-tw.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\main.css",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\main.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\main.min.css",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\fullcalendar\\main.min.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\s_knutson\\Desktop\\Invitaciones\\Invitaciones\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Invitaciones.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Invitaciones.props",
+      "PackagePath": "build\\Invitaciones.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Invitaciones.props",
+      "PackagePath": "buildMultiTargeting\\Invitaciones.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Invitaciones.props",
+      "PackagePath": "buildTransitive\\Invitaciones.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

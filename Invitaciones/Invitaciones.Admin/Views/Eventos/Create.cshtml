@@ -1,0 +1,345 @@
+﻿@model Invitaciones.Shared.Data.Evento
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Create";
+}
+
+@*<div class="card ">*@
+@*<div class="card-header">
+    <h3 class="card-title">Menú</h3>
+</div>*@
+   @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">*@
+<form asp-action="Create"  method="post" style="border:0;" id="UploadForm" enctype="multipart/form-data">
+        @*<form asp-action="Create">*@
+            <div class="row">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+               
+                     <div class="form-group col-md-6">
+                          <div class="card">
+                                <div class="card-body">
+                                <label asp-for="Formato" class="control-label"></label>
+                                <select asp-for="Formato" class ="form-control" onchange="formato()" asp-items="ViewBag.Formato" required></select>
+                                <span asp-validation-for="Formato" class="text-danger"></span>
+                            </div>
+                  </div>
+                </div>
+                
+                  <div class="form-group col-md-6">
+                      <div class="card">
+                          <div class="card-body">
+                              <label asp-for="IdCategoria" class="control-label"></label>
+                              <select asp-for="IdCategoria" class ="form-control" asp-items="ViewBag.IdCategoria" required></select>
+                          </div>
+                        </div>
+                 
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="card">
+                      <div class="card-body">
+                       <label asp-for="IdTipo" class="control-label"></label>
+                        <select asp-for="IdTipo" class ="form-control" asp-items="ViewBag.IdTipo" required></select>
+                      </div>
+                    </div>
+                   
+                </div>
+                <div class="form-group col-md-6">
+                    
+                    <div class="card">
+                      <div class="card-body">
+                          <label asp-for="IdOrganizador" class="control-label"></label>
+                          @*<select asp-for="IdOrganizador" class ="form-control" asp-items="ViewBag.IdOrganizador"></select>*@
+
+                          <select asp-for="IdOrganizador" class ="form-control" asp-items="ViewBag.IdOrganizador" required>
+                            <option value="">Seleccionar</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+              
+                <div class="form-group col-md-12">
+                  
+                    <div class="card">
+                      <div class="card-body">
+                            <label asp-for="Evento1" class="control-label"></label>
+                            <input asp-for="Evento1" class="form-control" required />
+                            <span asp-validation-for="Evento1" class="text-danger"></span>
+                      </div>
+                    </div>
+                </div>
+               
+                 <div class="form-group col-md-12">
+                   
+                    <div class="card">
+                      <div class="card-body">
+                        <label asp-for="Descripcion" class="control-label"></label>
+                        <input asp-for="Descripcion" class="form-control" required />
+                        <span asp-validation-for="Descripcion" class="text-danger"></span>
+                      </div>
+                    </div>
+                </div>
+                 <div class="form-group col-md-12">
+                   
+                    <div class="card">
+                      <div class="card-body">
+                 <label asp-for="LimitePersonas" class="control-label"></label>
+                <input asp-for="LimitePersonas" class="form-control" />
+                <span asp-validation-for="LimitePersonas" class="text-danger"></span>
+                      </div>
+                    </div>
+                </div>
+                
+            
+             
+
+
+                <div class="form-group col-md-12" id="dDireccion">
+                   
+                    <div class="card">
+                      <div class="card-body">
+                        <label asp-for="Direccion" class="control-label">Dirección</label>
+                        <input asp-for="Direccion" class="form-control" />
+                        <span asp-validation-for="Direccion" class="text-danger"></span>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12" id="dEnlace" style="display:none;">
+                   
+                    <div class="card">
+                      <div class="card-body">
+                        <label asp-for="EnlaceVirtual" class="control-label">Enlace</label>
+                        <input asp-for="EnlaceVirtual" class="form-control" />
+                        <span asp-validation-for="EnlaceVirtual" class="text-danger"></span>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                   
+                    <div class="card">
+                      <div class="card-body">
+                        <label asp-for="Imagen" class="control-label"></label>
+                        <input asp-for="Imagen" type="file" class="form-control" />
+                        <span asp-validation-for="Imagen" class="text-danger"></span>
+                      </div>
+                    </div>
+                </div>
+                 <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                           <label  class="control-label">Archivos adicionales</label>
+                              <div  id="dZUpload" class="dropzone">
+                              <div class="dz-default dz-message">Suelte los archivos aquí o haga clic para cargar.</div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                 @* <div class="col-md-6" id="dropzone">
+
+                <div action="/eventos/Upload" class="dropzone" id="uploader">
+
+                    Drop files here or click to upload.<br>
+
+                </div>
+
+            </div>*@
+                 <div class="form-group col-md-6">
+                  
+                       <label class="control-label">Repetir</label>
+                        @*<select asp-for="Repertir" class ="form-control" id="Repetir" onchange="RepetirChange()" >
+                            <option value="N">No</option>
+                            <option value="S" >Semanal</option>
+                            <option value="M" >Mensual</option>
+                            <option value="A">Anual</option>
+                            <option value="P">Personalizado</option>
+                        </select>*@
+                          <select asp-for="Repertir" class ="form-control" asp-items="ViewBag.Repetir" id="repetir" onchange="RepetirChange()">
+                            <option value="">Seleccionar</option>
+                        </select>
+                 </div>
+                
+                   
+               
+            <div class="col-md-12 form-group" id="fecha">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                           <div class="form-group col-md-6">
+                            <label asp-for="FechaInicio" class="control-label"></label>
+                            <input asp-for="FechaInicio" class="form-control" />
+                            <span asp-validation-for="FechaInicio" class="text-danger"></span>
+                             </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="FechaFin" class="control-label"></label>
+                                <input asp-for="FechaFin" class="form-control" />
+                                <span asp-validation-for="FechaFin" class="text-danger"></span>
+                            </div>
+                             <div class="form-group col-md-6">
+                                <label asp-for="HoraInicio" class="control-label"></label>
+                                <input asp-for="HoraInicio" class="form-control" type="time" />
+                                <span asp-validation-for="HoraInicio" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="HoraFin" class="control-label"></label>
+                                <input asp-for="HoraFin" class="form-control" type="time" />
+                                <span asp-validation-for="HoraFin" class="text-danger"></span>
+                            </div>
+                        </div>
+                         
+                    </div>
+                 </div>
+            </div>
+            
+           
+           
+           
+          
+
+            
+          
+          
+                 
+           <div class="col-md-12 form-group" id="pers" style="display:none;">
+            <div class="card">
+             <div class="card-body">
+                 <div class="row ">
+                   <div class="form-group col-md-2">
+                    <label asp="FechaDesde" class="control-label">Fecha Desde</label>
+                    <input name="FechaDesde" id="FechaDesde" type="date" class="form-control" />
+                    @*<span asp-validation-for="FechaDesde" class="text-danger"></span>*@
+                        </div>
+                          <div class="form-group col-md-2">
+                            <label asp="FechaHasta" class="control-label">Fecha Hasta</label>
+                            <input name="FechaHasta" id="FechaHasta" type="date" class="form-control" />
+                            @*<span asp-validation-for="FechaHasta" class="text-danger"></span>*@
+                         </div>
+                         <div class="form-group col-md-2">
+                            <label asp="HoraDesde" class="control-label">Hora Desde</label>
+                            <input name="HoraDesde" id="HoraDesde" class="form-control" type="time" />
+                            @*<span asp-validation-for="HoraDesde" class="text-danger"></span>*@
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp="HoraHasta" class="control-label">Hora Hasta</label>
+                            <input name="HoraHasta" id="HoraHasta" class="form-control" type="time" />
+                            @*<span asp-validation-for="HoraHasta" class="text-danger"></span>*@
+                        </div>
+               
+                            <div class="col-md-12 form-group">
+                                <a class="btn btn-secondary add-row" onclick="event.preventDefault()" href="#" >Agregar</a>
+                
+                           </div>
+                   </div>
+                   <div class="row">
+                         <div class="col-md-6"></div>
+                       <div class="table-responsive">
+                           <table id="tbFechas" class="table table-bordered">
+                               <thead>
+                                   <th>fecha desde</th>
+                                   <th>fecha hasta</th>
+                                   <th>hora desde</th>
+                                   <th>hora hasta</th>
+                                   <th>&nbsp;</th>
+                                </thead>
+                           <tbody>
+                       
+                           </tbody>
+                           </table>
+                   
+                       </div>
+                   </div>
+
+             </div>
+                              
+                              </div>
+
+            </div>
+                            
+            
+             
+            <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                           <label  class="control-label">Ubicación</label>
+                           <div class="row">
+                               <div class="col-md-12">
+                                    <input id="pac-input" class="controls" type="text" placeholder="Búsqueda">
+                                 <div id="myDiv" style="width:100%;height:400px;"></div>  
+                               </div>
+                               
+                           <div class="form-group col-md-6">
+                               @* <label asp-for="Latitud" class="control-label"></label>*@
+                                <input type="hidden" asp-for="Latitud" class="form-control" />
+                                <span asp-validation-for="Latitud" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                @*<label asp-for="Longitud" class="control-label"></label>*@
+                                <input type="hidden" asp-for="Longitud" class="form-control" />
+                                <span asp-validation-for="Longitud" class="text-danger"></span>
+                            </div>
+                              <div class="form-group col-md-6">
+                                <label asp-for="ZonaHoraria" class="control-label"></label>
+                                <select asp-for="ZonaHoraria" class ="form-control" onchange="formato()" asp-items="ViewBag.ZonaHoraria"></select>
+                                <span asp-validation-for="ZonaHoraria" class="text-danger"></span>
+                            </div>
+                           </div>
+
+                          
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            
+                 <div class="align-bottom col-md-12">
+                    <div class="form-group col-md-6 form-check ">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Activo" /> @Html.DisplayNameFor(model => model.Activo)
+                        </label>
+                     </div>
+                </div>
+               <div class="card-footer col-md-12">
+                     <input type="submit" value="Insertar Evento" class="btn btn-primary" />
+                     @*<a asp-action="Index" class="btn btn-secondary">Volver</a>*@
+               </div>
+            </div>
+        </form>
+@*    </div>*@
+
+@section Scripts {
+@*     <script src="~/lib/jquery/dist/jquery.min.js" />
+ <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />*@
+
+  <script>
+       $(document).ready(function(){
+          //
+           //Dropzone.options.UploadForm = {
+           //     paramName: "file",
+           //     maxFilesize: 2,
+           //     accept: function (file, done) {
+           //         if (file.name == "test.jpg") {
+           //             alert("Can't upload a test file.");
+           //         }
+           //         else {
+           //             //Show a confirm alert and display the image on the page.
+           //       }
+           //    }
+           // };
+            //
+            $("#Formato").change(function() {
+              if($("#Formato").val()=="P")
+              {
+                  $("#dDireccion").show();
+                  $("#dEnlace").hide();
+              }
+              else
+              {
+                   $("#dDireccion").hide();
+                   $("#dEnlace").show();
+              }
+            });
+       });
+       function myParamName() {
+           return "DocumentPhotos";
+        }
+
+</script>
+}

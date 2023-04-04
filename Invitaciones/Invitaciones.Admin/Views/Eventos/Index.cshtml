@@ -1,0 +1,547 @@
+﻿@model IEnumerable<Invitaciones.Shared.Data.Evento>
+
+@{
+    ViewData["Title"] = "Index";
+    MenuModel mm = ViewBag.MenuMod;
+}
+<style>
+    .controls {
+    margin-top: 16px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+    #pac-input {
+    background-color: #fff;
+    padding: 0 11px 0 13px;
+    width: 400px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+}
+#pac-input:focus {
+    border-color: #4d90fe;
+    margin-left: -1px;
+    padding-left: 14px;
+    /* Regular padding-left + 1. */
+    width: 401px;
+}
+.pac-container {
+    font-family: Roboto;
+}
+
+.error {
+  color: red;
+  margin-left: 5px;
+}
+
+label.error {
+  display: inline;
+}
+</style>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col">
+                <h3 class="card-title">Eventos</h3>
+            </div>
+           @* <div class="col text-right">
+                <a class="btn btn-secondary" href="/menus/create">Agregar Nuevo</a>
+            </div>*@
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12" id="partial">
+              @*  @await Html.PartialAsync("~/Viewseventos/create.cshtml", new MRE_Invitaciones.Data.Evento())*@
+            </div>
+        </div>
+          <div class="row mt-3 mb-3">
+           @* <div class="col-md-6">
+                <input type="text" id="usuario" name="usuario" placeholder="Filtrar " autocomplete="off" class="form-control" />
+            </div>*@
+        </div>
+        <div class="table-responsive">
+            <table id="eventos" class="table ">
+                <thead>
+                    <tr>
+                        <th>Modificar</th>
+                       <th>
+                @Html.DisplayNameFor(model => model.Evento1)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.FechaDesde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaHasta)
+            </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.Activo)
+                        </th>
+                     @*   <th></th>*@
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model) {
+                        <tr>
+                            <td><button onclick="edit(@item.IdEvento,@item.Latitud, @item.Longitud)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="eventos/DeleteConfirmed/@item.IdEvento" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
+                            <td>
+                                    @Html.DisplayFor(modelItem => item.Evento1)
+                                </td>
+                               @* <td>
+                                    @Html.DisplayFor(modelItem => item.FechaDesde)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FechaHasta)
+                                </td>*@
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Activo)
+                            </td>
+                           @* <td>
+                                <a asp-action="Edit" asp-route-id="@item.IdMenu"><i class="fa fa-pen"></i></a> |
+                                <a asp-action="Details" asp-route-id="@item.IdMenu"><i class="fas fa-eye"></i></a> |
+                                <a asp-action="Delete" asp-route-id="@item.IdMenu"><i class="fas fa-trash"></i></a>
+                            </td>*@
+                        </tr>
+                }
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+        </div>
+
+</div>
+</div>
+ @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+   @* <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBPQbDQfjTz0EYt4UHSoMhr6DzgOkubeE"></script> *@
+    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVrawalG4YEM5y8DdY1x9zv6cu1ERNv0A"></script> *@
+   @*<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVrawalG4YEM5y8DdY1x9zv6cu1ERNv0A&callback=initAutocomplete&libraries=places&v=weekly"
+      defer
+    ></script>*@
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVrawalG4YEM5y8DdY1x9zv6cu1ERNv0A&callback=initialize&libraries=places">
+</script>
+     @*<script src="https://maps.googleapis.com/maps/api/js?"></script> *@
+   <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+<script src="/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script>
+         $(document).ready(function(){
+          $('#eventos').DataTable({
+              "paging": true,
+              "lengthChange": false,
+              "searching": true,
+              "ordering": true,
+              "info": false,
+              "autoWidth": false,
+              "responsive": true,
+              "language": {
+                "paginate": {
+                  "previous": "anterior",
+                   "next": "siguiente"
+                },
+                "search": "Filtrar:"
+              }
+            });
+             var ind = 0;
+           //$('body').scrollTo('#target');
+          $.ajax({
+                type: 'GET',
+                url: "@Url.Content("~")/eventos/create",    
+                data : {                          
+                          //Data need to pass as parameter                       
+                       },           
+                dataType: 'html', //dataType - html
+                success:function(result)
+                {
+                   //Create a Div around the Partial View and fill the result
+                   $('#partial').html(result); 
+                   //DisplayGoogleMap();
+                   //drop
+                   //
+                    Dropzone.autoDiscover = false;
+                        //Simple Dropzonejs 
+                        $("#dZUpload").dropzone({
+                            url: "eventos/upload",
+                            addRemoveLinks: true,
+                            success: function (file, response) {
+                                var imgName = response;
+                                file.previewElement.classList.add("dz-success");
+                                console.log("Successfully uploaded :" + imgName);
+                            },
+                            error: function (file, response) {
+                                file.previewElement.classList.add("dz-error");
+                            }
+                        });
+                  //
+                  //
+                  //** gmaps */
+                    initialize(-25.2840877,-57.637612);
+                  //
+                    $(".add-row").click(function(){
+                        var fdes = $('#FechaDesde').val();
+                        var fhas = $('#FechaHasta').val();
+                        var hdes = $('#HoraDesde').val();
+                        var hhas = $('#HoraHasta').val();
+
+                        $(".error").remove();
+
+                        if (fdes.length < 1) {
+                          $('#FechaDesde').after('<span class="error">campo requerido</span>');
+                            return;
+                        }
+                        if (fhas.length < 1) {
+                          $('#FechaHasta').after('<span class="error">campo requerido</span>');
+                            return;
+                        }
+                         if (hdes.length < 1) {
+                          $('#HoraDesde').after('<span class="error">campo requerido</span>');
+                            return;
+                        }
+                        if (hhas.length < 1) {
+                          $('#HoraHasta').after('<span class="error">campo requerido</span>');
+                            return;
+                        }
+                        var markup = "<tr id='"+ind+"'>"+
+                        "<td><input type='hidden' name='fdes' value='"+ $("#FechaDesde").val() + "'>"+ $("#FechaDesde").val() + "</td>" +
+                        "<td><input type='hidden' name='fhas' value='"+ $("#FechaHasta").val() + "'>"+ $("#FechaHasta").val() + "</td>" +
+                        "<td><input type='hidden' name='hdes' value='"+ $("#HoraDesde").val()  + "'>"+ $("#HoraDesde").val()  + "</td>" +
+                        "<td><input type='hidden' name='hhas' value='"+ $("#HoraHasta").val()  + "'>"+ $("#HoraHasta").val()  + "</td>" +
+                        "<td><a href='javascript:void(0)' onclick='deleter("+ind+")'>eliminar </a></td>" +
+                        "</tr>";
+                        $("#tbFechas tbody").append(markup);
+                        ind = ind + 1;
+                      });
+                  
+                }
+             });
+          //
+          $("#usuario").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#eventos tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+         
+        
+        // Find and remove selected table rows
+            $(".delete-row").click(function(){
+                $("table tbody").find('input[name="record"]').each(function(){
+                    if($(this).is(":checked")){
+                        $(this).parents("tr").remove();
+                    }
+                });
+            });
+            //formato
+
+        });
+        
+       
+      
+
+        function addRow() {
+            $('#tbFechas').append($('<tr>')
+                .append($('<td>').append("text1"))
+                .append($('<td>').append("text2"))
+                .append($('<td>').append("text3"))
+                .append($('<td>').append("text4"))
+            );
+        }
+            function RepetirChange() {
+                if ($("#repetir").val() == "P") {
+                    $("#pers").show("slow");
+                    $("#fecha").hide("slow");
+                   
+                }
+                else
+                {
+                    $("#pers").hide("slow");
+                    $("#fecha").show("slow");
+                }
+                    
+            }
+         function DisplayGoogleMap() {  
+  
+            //Set the Latitude and Longitude of the Map  
+            var myAddress = new google.maps.LatLng(-25.3006600,-57.6359100);  
+  
+            //Create Options or set different Characteristics of Google Map  
+            var mapOptions = {  
+                center: myAddress,  
+                zoom: 15,  
+                minZoom: 15,  
+                mapTypeId: google.maps.MapTypeId.ROADMAP  
+            };  
+  
+            //Display the Google map in the div control with the defined Options  
+            var map = new google.maps.Map(document.getElementById("myDiv"), mapOptions);  
+  
+            //Set Marker on the Map  
+            var marker = new google.maps.Marker({  
+                position: myAddress,  
+                animation: google.maps.Animation.BOUNCE,  
+            });  
+  
+            marker.setMap(map);  
+            var latInput = document.getElementsByName('latitude')[0];
+                var lngInput = document.getElementsByName('longitude')[0];
+                latInput.value = place.geometry.location.lat()
+                lngInput.value = place.geometry.location.lng();
+                google.maps.event.addListener(marker, 'dragend', function (e) {
+                    latInput.value = e.latLng.lat();
+                    lngInput.value = e.latLng.lng();
+                    alert(e.latLng.lng())
+                });
+            // guess this will return latLng
+
+            google.maps.event.addListener(map, 'zoom-changed', function() { 
+               alert(map.getZoom())
+             });
+            // will return zoom
+
+            map.setCenter(latlng); // will set the center of the map 
+            
+           }
+    
+           //formato
+           function formato() {
+                if($("#Formato").val()=="P")
+                {
+                    $("#dDireccion").show();
+                    $("#dEnlace").hide();
+                }
+                else if($("#Formato").val()=="V")
+                {
+                    $("#dDireccion").hide();
+                    $("#dEnlace").show();
+                }
+                else
+                {
+                    $("#dDireccion").show();
+                    $("#dEnlace").show();
+                }
+            }
+            //gmaps
+            function initialize(lat, long) {
+
+                var markers = [];
+                 var myAddress = new google.maps.LatLng(lat,long);  
+                 //var myAddress = new google.maps.LatLng(-25.2840877,-57.637612);  
+                   var latInput = document.getElementsByName('Latitud')[0];
+                   var lngInput = document.getElementsByName('Longitud')[0];
+                    var mapOptions = {  
+                        center: myAddress,  
+                        zoom: 18,  
+                        minZoom: 15,  
+                        mapTypeId: google.maps.MapTypeId.ROADMAP  
+                    };
+                    var map = new google.maps.Map(document.getElementById("myDiv"), mapOptions);  
+                    latInput.value = lat
+                        lngInput.value = long
+                     //var map = new google.maps.Map(document.getElementById('myDiv'), {
+                     //           mapTypeId: google.maps.MapTypeId.ROADMAP,
+                     //           zoom: 24
+                     //       });
+
+    //var defaultBounds = new google.maps.LatLngBounds(
+    //new google.maps.LatLng(-25.2840877, -57.637612),
+    //new google.maps.LatLng(-25.2840877, -57.637612));
+    //map.fitBounds(defaultBounds);
+
+
+                //var map = new google.maps.Map(document.getElementById('myDiv'), {
+                //    mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+                //});
+                  //var map = new google.maps.Map(document.getElementById('myDiv'), {zoom: 14});
+                  //navigator.geolocation.getCurrentPosition(function(position) {
+                  //  var pos = {
+                  //    lat: position.coords.latitude,
+                  //    lng: position.coords.longitude
+                  //  };
+                  //  map.setCenter(pos);
+                  //});
+                //var defaultBounds = new google.maps.LatLngBounds(
+                //new google.maps.LatLng(-25.3006600,-57.6359100),
+                //new google.maps.LatLng(-25.3006600,-57.6359100));
+                //var defaultBounds = new google.maps.LatLngBounds(
+                //new google.maps.LatLng(-25.2840877,-57.637612),
+                //new google.maps.LatLng(-25.2840877,-57.637612));
+                //map.fitBounds(defaultBounds);
+                   //Create Options or set different Characteristics of Google Map  
+                     
+  
+                    //Display the Google map in the div control with the defined Options  
+                    //var map = new google.maps.Map(document.getElementById("myDiv"), mapOptions);  
+  
+                    //Set Marker on the Map  
+                    var marker = new google.maps.Marker({  
+                        position: myAddress,  
+                        animation: google.maps.Animation.BOUNCE,
+                        draggable:true,
+                        
+                            
+                    });  
+  
+                    marker.setMap(map); 
+                    google.maps.event.addListener(marker, 'dragend', function (e) {
+                    latInput.value = e.latLng.lat();
+                    lngInput.value = e.latLng.lng();
+                   
+                });
+                // Create the search box and link it to the UI element.
+                var input =  
+                (
+                document.getElementById('pac-input'));
+                map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+                var searchBox = new google.maps.places.SearchBox(
+                (input));
+
+                // Listen for the event fired when the user selects an item from the
+                // pick list. Retrieve the matching places for that item.
+                google.maps.event.addListener(searchBox, 'places_changed', function () {
+
+                    var places = searchBox.getPlaces();
+
+                    for (var i = 0, marker; marker = markers[i]; i++) {
+                        marker.setMap(null);
+                    }
+
+                    markers = [];
+                    var bounds = new google.maps.LatLngBounds();
+
+                    for (var i = 0, place; place = places[i]; i++) {
+
+                        // Create a marker for each place.
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            draggable:true,
+                            title: place.name,
+                            position: place.geometry.location
+                        });
+            
+                      
+                        latInput.value = place.geometry.location.lat()
+                        lngInput.value = place.geometry.location.lng();
+                        google.maps.event.addListener(marker, 'dragend', function (e) {
+                            latInput.value = e.latLng.lat();
+                            lngInput.value = e.latLng.lng();
+                        });
+
+
+                        markers.push(marker);
+
+                        bounds.extend(place.geometry.location);
+                    }
+                    console.log(bounds)
+                    map.fitBounds(bounds);
+                });
+            }
+         function deleter(obj)
+        {
+                        $("#"+obj+"").remove();
+
+        }
+    </script>
+    
+}
+ <script>  
+       function edit (id,lat,lon) {  
+           //$("#partial").load("eventos/edit/"+id);         
+           //initialize(-25.2840877,-57.637612);
+            $.ajax({
+                type: 'GET',
+                url: "@Url.Content("~")/eventos/edit/"+id,    
+                data : {                          
+                          //Data need to pass as parameter                       
+                       },           
+                dataType: 'html', //dataType - html
+                success:function(result)
+                {
+                   //Create a Div around the Partial View and fill the result
+                   $('#partial').html(result); 
+                   //DisplayGoogleMap();
+                   //drop
+                   //
+                    Dropzone.autoDiscover = false;
+                        //Simple Dropzonejs 
+                        $("#dZUpload").dropzone({
+                            url: "eventos/upload",
+                            addRemoveLinks: true,
+                            success: function (file, response) {
+                                var imgName = response;
+                                file.previewElement.classList.add("dz-success");
+                                console.log("Successfully uploaded :" + imgName);
+                            },
+                            error: function (file, response) {
+                                file.previewElement.classList.add("dz-error");
+                            }
+                        });
+                  //
+                  //
+                  //** gmaps */
+                   // alert($("#Latitud").val());
+                    initialize(lat,lon);
+                  //
+                    $(".add-row").click(function(){
+                        
+                       var fdes = $('#FechaDesde').val();
+                        var fhas = $('#FechaHasta').val();
+                        var hdes = $('#HoraDesde').val();
+                        var hhas = $('#HoraHasta').val();
+
+                        $(".error").remove();
+
+                        if (fdes.length < 1) {
+                          $('#FechaDesde').after('<span class="error">campo requerido</span>');
+                            return;
+                        }
+                        if (fhas.length < 1) {
+                          $('#FechaHasta').after('<span class="error">campo requerido</span>');
+                            return;
+                        }
+                         if (hdes.length < 1) {
+                          $('#HoraDesde').after('<span class="error">campo requerido</span>');
+                            return;
+                        }
+                        if (hhas.length < 1) {
+                          $('#HoraHasta').after('<span class="error">campo requerido</span>');
+                            return;
+                        }
+                        var markup = "<tr id='"+ind+"'>"+
+                        "<td><input type='hidden' name='fdes' value='"+ $("#FechaDesde").val() + "'>"+ $("#FechaDesde").val() + "</td>" +
+                        "<td><input type='hidden' name='fhas' value='"+ $("#FechaHasta").val() + "'>"+ $("#FechaHasta").val() + "</td>" +
+                        "<td><input type='hidden' name='hdes' value='"+ $("#HoraDesde").val()  + "'>"+ $("#HoraDesde").val()  + "</td>" +
+                        "<td><input type='hidden' name='hhas' value='"+ $("#HoraHasta").val()  + "'>"+ $("#HoraHasta").val()  + "</td>" +
+                        "<td><a href='javascript:void(0)' onclick='deleter("+ind+")'>eliminar </a></td>" +
+                        "</tr>";
+                        $("#tbFechas tbody").append(markup);
+                        ind = ind + 1;
+                      });
+                    RepetirChange();
+                    window.scrollTo(0,0);
+                }
+             });
+        } 
+        function deleteArchivo(id) {
+var url = this.href;
+    var confirmText = "¿Confirma Eliminar archivo?";
+    if(confirm(confirmText)) {
+        $.ajax({
+            type:"POST",
+            url:url,
+            success:function () {
+            // Here goes something...
+            },
+        });
+    }
+    return false;
+        }
+ </script>  

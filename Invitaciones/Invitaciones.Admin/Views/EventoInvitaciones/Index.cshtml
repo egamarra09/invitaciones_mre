@@ -1,0 +1,118 @@
+﻿@model IEnumerable<Invitaciones.Shared.Data.EventoInvitacione>
+
+@{
+    ViewData["Title"] = "Index";
+    var eventos = ViewData["Eventos"] as List<Invitaciones.Shared.Data.Evento>;
+}
+
+@*<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col">
+                <h3 class="card-title">Invitaciones</h3>
+            </div>
+           @* <div class="col text-right">
+                <a class="btn btn-secondary" href="/menus/create">Agregar Nuevo</a>
+            </div>*@
+        </div>
+    </div>
+    <div class="card-body">
+       @* <div class="row">
+            <div class="col-md-12" id="partial">
+                @await Html.PartialAsync("~/Views/EventoInvitaciones/create.cshtml", new MRE_Invitaciones.Data.EventoInvitacione())
+            </div>
+        </div>*@
+          <div class="row mt-3 mb-3">
+            @*<div class="col-md-6">
+                <input type="text" id="usuario" name="usuario" placeholder="Filtrar " autocomplete="off" class="form-control" />
+            </div>*@
+        </div>
+        <div class="table-responsive">
+            <table id="tbUsuarios" class="table ">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.IdEvento)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Enviado)
+                            </th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model) {                        
+                        var ev = eventos.Where(q=>q.IdEvento==item.IdEvento).FirstOrDefault();
+                        <tr>
+                                    <td>
+                                       
+                                        @Html.Raw(ev.Evento1)
+                                    </td>
+                                    <td>
+                                         @if(item.Enviado ==false)
+                                        {
+                                            <span class="badge badge-warning">No</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-success">Si</span>
+                                        }
+                                        
+                                    </td>
+                                    <td>
+                                  
+
+                                        <a asp-action="Edit" asp-route-id="@item.IdInvitacion" class="mr-1"><i class="fa fa-user-plus"></i></a> 
+                                        <a asp-action="Reporte" asp-route-id="@item.IdInvitacion" class="mr-1"><i class="fa fa-list"></i></a>
+                                        @*<a asp-action="Print" asp-route-id="@item.IdInvitacion" class="mr-1"><i class="fa fa-print"></i></a>*@
+                                        <a asp-action="Enviar" asp-route-id="@item.IdInvitacion" class="mr-1"><i class="fa fa-envelope"></i></a>
+
+                                    </td>
+                                </tr>
+                        }
+                    </tbody>
+                </table>
+        </div>
+
+</div>
+</div>
+ @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+         $(document).ready(function(){
+          $("#usuario").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tbUsuarios tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+           $('#tbUsuarios').DataTable({
+              "paging": true,
+              "lengthChange": false,
+              "searching": true,
+              "ordering": true,
+              "info": false,
+              "autoWidth": false,
+              "responsive": true,
+              "language": {
+                "paginate": {
+                  "previous": "anterior",
+                   "next": "siguiente"
+                },
+                "search": "Filtrar:"
+              }
+            });
+        });
+    </script>
+    
+}
+ <script>  
+       function edit (id) {  
+           $("#partial").load("@Url.Content("~")/EventoInvitaciones/edit/"+id);
+        } 
+ </script> 

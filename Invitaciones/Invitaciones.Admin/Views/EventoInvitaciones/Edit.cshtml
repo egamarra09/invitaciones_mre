@@ -1,0 +1,533 @@
+﻿@model Invitaciones.Shared.Data.EventoInvitacione
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@*<h1>Edit</h1>
+
+<h4>EventoInvitacione</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">*@
+            <form asp-action="Edit" enctype="multipart/form-data">
+                    <div class="card col-md-12">
+                       <div class="card-body">
+                   <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                        <li class="nav-item">
+                        <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home" aria-selected="true">Invitación</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Invitados</a>
+                        </li>
+       
+                   </ul>
+                    <div class="tab-content" id="custom-content-below-tabContent">
+                        <div class="tab-pane fade show active" id="custom-content-below-home" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+                        <div class="row mt-3">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="IdInvitacion" />
+                    <input type="hidden" asp-for="IdEvento" />
+                            @*<div class="form-group col-md-8 ">
+                    <label asp-for="IdEvento" class="control-label"></label>
+                    <select asp-for="IdEvento" class ="form-control" asp-items="ViewBag.IdEvento" required></select>
+                    <span asp-validation-for="IdEvento" class="text-danger"></span>
+                </div>*@
+                
+                 <div class="form-group col-md-8">
+                    <label  class="control-label">Titulo invitación</label>
+                    @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                    <input type="text" asp-for="Titulo" placeholder="Asunto para el envio de invitación digital" class="form-control " />
+                    @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                 </div>
+                  <div class="form-group col-md-8">
+                    <label  class="control-label" >Remitente de la invitación</label>
+                    @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                    <textarea rows="5" asp-for="Remitente" placeholder="El Ministro de Relaciones Exteriores" class="form-control summernote"></textarea>
+                    @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                 </div>
+                  <div class="form-group col-md-8">
+                    <label  class="control-label"></label>
+                    @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                    <textarea rows="5" asp-for="Saludo"  placeholder="se complace en invitar" class="form-control summernote">@Model.Saludo</textarea>
+                    @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                 </div>
+                  <div class="form-group col-md-8">
+                    <label  class="control-label">Motivo del evento</label>
+                    @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                    <textarea rows="5" asp-for="Motivo" placeholder="a la ceremonia de imposición de la Condecoración de la Orden Nacional
+del Mérito en el grado de “Comendador”" class="form-control summernote">@Model.Motivo</textarea>
+                    @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                 </div>
+              
+                   <div class="form-group col-md-8">
+                    <label  class="control-label">Fecha y hora del Evento</label>
+                    @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                    <textarea rows="5" asp-for="Fecha" placeholder="viernes 9 de diciembre de 2022, a las 17:00" class="form-control summernote">@Model.Fecha</textarea>
+                    @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                 </div>
+                   <div class="form-group col-md-8">
+                    <label  class="control-label">Lugar del Evento</label>
+                    @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                    <textarea rows="5" asp-for="Lugar" placeholder="Palacio Benigno López" class="form-control summernote">@Model.Lugar</textarea>
+                    @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                 </div>
+                   <div class="form-group col-md-8">
+                    <label  class="control-label">Direccion del Evento</label>
+                    @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                    <textarea rows="5" asp-for="Direccion" placeholder="Ingrese direccion del evento" class="form-control summernote">@Model.Direccion</textarea>
+                    @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                 </div>
+                  <div class="form-group col-md-8">
+                    <label  class="control-label">Tenida</label>
+                    @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                    <textarea rows="5" asp-for="Tenida" id="tenida" placeholder="Damas: Elegante" class="form-control summernote">@Model.Tenida</textarea>
+                    @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                 </div>
+                  <div class="form-group col-md-8">
+                    <label  class="control-label">Forma confirmación</label>
+                     <select asp-for="TipoConf" class="form-control">
+                         <option value="1">Texto</option>
+                         <option value="2">Enlace</option>
+                         <option value="3">QR</option>
+                     </select>
+                 </div>
+                 <div class="form-group col-md-8">
+                    <label  class="control-label">Texto confirmación</label>
+                    @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                    <textarea rows="5" asp-for="TextConf" placeholder="Damas: Elegante" class="form-control summernote">@Model.TextConf</textarea>
+                    @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                 </div>
+                 <div class="form-group col-md-8">
+                    <label  class="control-label">Imagen QR</label>
+                   <input type="file" asp-for="Archivo" />
+                 </div>  
+               
+            </div>
+                        </div>
+                <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+                 
+                  
+                    <div class="row mt-3 mb-3">
+                          <div class="form-group col-md-8">
+                            <label  class="control-label">Institución</label>
+                            @*<label asp-for="IdInstitucion" class="control-label"></label>*@
+                            <div class="input-group" >
+                                <select class="form-control" id="Inst" asp-items="ViewBag.IdInstitucion" onchange="GetPersonas()" >
+                                    <option value="">Seleccionar</option>
+                                </select>
+                             <div class="input-group-append">
+                                <div class="col-md-4 align-middle"> <a class="btn btn-secondary" onclick="Agregar_Todos()">Todos</a></div>
+                             </div>
+                            </div>
+                            
+                            @*<span asp-validation-for="IdInstitucion" class="text-danger"></span>*@
+                        </div>
+
+                       
+                        <div class="col-md-6">
+                            @*<input type="text" id="usuario" name="usuario" placeholder="Filtrar " autocomplete="off" class="form-control" />*@
+                            <div class="autocomplete" >
+                                <input id="myInput" class="form-control" type="text" name="myCountry" placeholder="Nombre">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="tbUsuarios" class="table ">
+                                <thead>
+                                    <tr>
+                                        @*<th>
+                                            @Html.DisplayNameFor(model => model.IdEvento)
+                                        </th>*@
+                                        <th>Nombre</th>
+                                        <th>Acompañante</th>
+                                        <th>Institucion</th>
+                                        
+                                        <th>Grupo</th>
+                                        <th>Cargo</th>
+                                        <th>Confirmación</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                @{
+                                    var i = 0;
+                                }
+                                @foreach (var inv in Model.EventoInvitados)
+                                {
+                                    var grupo = inv.IdPersonaNavigation.IdGrupoNavigation;
+                                    <tr id="R_@i">
+                                     <td class="row-index">
+                                     <input type='hidden' name='invitado' value='@inv.IdPersona'  />
+                                     <p> @inv.IdPersonaNavigation.Nombre</p>
+                                     </td>
+                                         <td><input type='text' class='form-control' name='adicional' value="@inv.TextoAdicional" /></td>
+                                         <td> <p> @inv.IdPersonaNavigation.IdInstitucionNavigation.Nombre</p></td>
+                                         <td> <p> @(grupo !=null ?grupo.Nombre:"")</p></td>
+                                     <td> <p> @inv.IdPersonaNavigation.Cargo</p></td>
+                                    <td> 
+                                        @if(inv.Confirmado ==false)
+                                        {
+                                            <span class="badge badge-warning">Pendiente</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-success">Confirmado</span>
+                                        }
+
+                                    </td>
+                                      <td class="">
+                                      @*  <button class="btn btn-danger remove"
+                                          type="button">eliminar</button>*@
+                                          <a class="remove" ><i class="fa fa-trash"></i></a>
+                                          <a data-toggle="modal"
+      data-target="#exampleModal" onclick="edit(@inv.IdEventoInvitacion,@inv.IdPersona)"><i class="fa fa-print"></i></a>
+                                        </td>
+                                      </tr>
+                                    i+=1;
+                                }
+                            </tbody>
+                            </table>
+                    </div>
+                </div>
+       
+                    </div>
+                     <div class="card-footer col-md-8">
+                                     <input type="submit" value="Guardar" class="btn btn-primary" />
+                                     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                                      @*<div id="qr"></div>*@
+                           </div>
+                               </div>
+                   </div>
+            </form>
+          
+            
+        
+                
+                   
+            @*</div>*@
+       
+@*    </div>
+</div>*@
+<!-- Modal -->
+    @*<div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <iframe
+              width="100%"
+             
+              src="/EventoInvitaciones/print/1"
+              
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>*@
+
+    <div class="modal fade" id="exampleModal" aria-hidden="true" style="display: none;">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Vista previa invitación</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<div class="col-md-12" id="partial">
+                
+            </div>
+</div>
+<div class="modal-footer justify-content-between">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+<button type="button" class="btn btn-primary" onclick="imprimir()">Imprimir</button>
+</div>
+</div>
+
+</div>
+
+</div>
+@section Scripts {
+    <script src="/dist/js/jquery.qrcode.js" > </script>
+     <script src="/dist/js/qrcode.js" > </script>
+    <script>
+    var rowIdx = @Model.EventoInvitados.Count();
+$(document).ready(function() {
+    $('.summernote').summernote({
+        height: 200,   
+        'fontNames': ['Segoe UI' ,  'Arial' ,  'Courier New',  'Georgia',  'Impact',  'Lucida Console',  'Tahoma',   'Times New Roman',   'Trebuchet MS',    'Verdana'],
+        toolbar: [
+            ['style', ['bold', 'italic']], //Specific toolbar display
+            ['color', ['color']],
+            //['fontname', ['fontname']], 
+            //['para', ['ul', 'ol', 'paragraph']]
+            ]
+  });
+  // jQuery button click event to remove a row.
+      $('#tbody').on('click', '.remove', function () {
+  
+        // Getting all the rows next to the row
+        // containing the clicked button
+        var child = $(this).closest('tr').nextAll();
+  
+        // Iterating across all the rows 
+        // obtained to change the index
+        child.each(function () {
+  
+          // Getting <tr> id.
+          var id = $(this).attr('id');
+  
+          // Getting the <p> inside the .row-index class.
+          var idx = $(this).children('.row-index').children('p');
+  
+          // Gets the row number from <tr> id.
+          var dig = parseInt(id.substring(1));
+  
+          // Modifying row index.
+          idx.html(`Row ${dig - 1}`);
+  
+          // Modifying row id.
+          $(this).attr('id', `R_${dig - 1}`);
+        });
+  
+        // Removing the current row.
+        $(this).closest('tr').remove();
+  
+        // Decreasing total number of rows by 1.
+        rowIdx--;
+      });
+});
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              //alert( inp.value )
+              addRow(countries.indexOf(inp.value));
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+   
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+     
+      closeAllLists(e.target);
+  });
+}
+
+
+/*An array containing all the country names in the world:*/
+var countries = [];
+var personas = [];
+var seleccion = [];
+var todos = [];
+
+function GetPersonas()
+{
+    var jqxhr = $.getJSON("@Url.Content("~")/EventoInvitaciones/Personas/"+$("#Inst").val(), function() {
+      console.log( "success" );
+    })
+      .done(function( data ) {
+        todos = data;
+          personas = [];
+        $.each( data, function( i, item ) {      
+         personas.push(item);
+        });
+          countries = [];
+        $.each( personas, function( i, item ) {      
+         countries.push(item.nombre);
+        });
+          
+        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+        autocomplete(document.getElementById("myInput"), countries);
+      })
+      .fail(function() {
+        console.log( "error" );
+      })
+      .always(function() {
+        //console.log( "complete" );
+      });
+ 
+    // Perform other work here ...
+ 
+    // Set another completion function for the request above
+    //jqxhr.always(function() {
+    //  console.log( "second complete" );
+    //});
+}
+GetPersonas();
+function addRow(index)
+{
+        
+     var per = getByIndex(personas,index);
+     var IdEv = @Model.IdInvitacion;
+         $('#tbody').append(`<tr id="R_${++rowIdx}">
+             <td class="row-index">
+             <input type='hidden' name='invitado' value='${per.id}'  />
+             <p> ${per.nombre}</p>
+             </td>          
+             <td><input type='text' class='form-control' name='adicional' /></td>
+             <td> <p> ${per.institucion}</p></td>
+             <td> <p> ${per.grupo}</p></td>
+             <td> <p> ${per.cargo}</p></td>
+             <td> <span class="badge badge-warning">Pendiente</span></td>
+              <td class="">
+               <a class="remove" ><i class="fa fa-trash"></i></a>
+                                          
+                </td>
+              </tr>`);
+}
+function Agregar_Todos()
+{
+     let i = 0;
+
+        while (i < todos.length) {
+            var per = getByIndex(todos,i);
+            var IdEv = @Model.IdInvitacion;
+            if (seleccion.indexOf(per) ==-1) {
+                seleccion.push(per);
+                $('#tbody').append(`<tr id="R_${++rowIdx}">
+               <td class="row-index">
+                 <input type='hidden' name='invitado' value='${per.id}'  />
+                 <p> ${per.nombre}</p>
+                 </td>          
+                 <td><input type='text' class='form-control' name='adicional' /></td>
+                 <td> <p> ${per.institucion}</p></td>
+                 <td> <p> ${per.grupo}</p></td>
+                 <td> <p> ${per.cargo}</p></td>
+                 <td> <span class="badge badge-warning">Pendiente</span></td>
+                  <td class="">
+                   <a class="remove" ><i class="fa fa-trash"></i></a>
+                  </tr>`);
+                
+            }
+            i++;
+        }   
+     
+}
+ function getByIndex(obj, index) {
+  index=parseInt(index);
+
+  return obj[Object.keys(obj)[index]];
+}
+</script>
+<script>
+    
+    $(document).ready(function () {
+  
+      // Denotes total number of rows
+        //jQuery('#qr').qrcode("QR code text");
+  
+      // jQuery button click event to add a row
+      $('#addBtn').on('click', function () {
+  
+        // Adding a row inside the tbody.
+       
+      });
+    
+      
+    });
+    function edit (id, inv) {  
+           $("#partial").load("@Url.Content("~")/EventoInvitaciones/print?id="+id+"&Invitado="+inv);      
+           //alert( jQuery('#qr'))
+              //jQuery('#qr').qrcode("QR code text");
+        } 
+    function imprimir() {
+         var restorepage = document.body.innerHTML;
+        var printcontent = document.getElementById('partial').innerHTML;
+        document.body.innerHTML = printcontent;
+        window.print();
+        document.body.innerHTML = restorepage;
+    }
+  </script>
+  }

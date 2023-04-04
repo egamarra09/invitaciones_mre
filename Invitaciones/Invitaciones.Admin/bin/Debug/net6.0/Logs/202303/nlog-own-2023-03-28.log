@@ -1,0 +1,132 @@
+2023-03-28 18:15:01.4643||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 18:17:45.5289||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 18:25:33.3924||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 18:31:00.0668||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 20:23:55.6832||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 20:26:36.0766||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 20:27:49.1986||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 21:09:46.6223||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 21:18:09.5115||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 21:24:26.3103||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 22:06:34.8078||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 22:16:49.4493||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 22:34:03.1356||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Edit(Int32 id, EventoInvitacione eventoInvitacione, IFormFile Archivo, IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Edit/8|action: Edit
+2023-03-28 22:35:39.0335||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Edit(Int32 id, EventoInvitacione eventoInvitacione, IFormFile Archivo, IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Edit/8|action: Edit
+2023-03-28 22:37:16.8342||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Edit(Int32 id, EventoInvitacione eventoInvitacione, IFormFile Archivo, IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Edit/8|action: Edit
+2023-03-28 22:38:11.1295||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Edit(Int32 id, EventoInvitacione eventoInvitacione, IFormFile Archivo, IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Edit/8|action: Edit
+2023-03-28 22:43:23.6898||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Edit(Int32 id, EventoInvitacione eventoInvitacione, IFormFile Archivo, IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Edit/8|action: Edit
+2023-03-28 22:44:54.2306||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Edit(Int32 id, EventoInvitacione eventoInvitacione, IFormFile Archivo, IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Edit/8|action: Edit
+2023-03-28 22:46:32.1489||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+Index was outside the bounds of the array. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Edit(Int32 id, EventoInvitacione eventoInvitacione, IFormFile Archivo, IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Edit/8|action: Edit
+2023-03-28 22:46:42.6861||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+An error occurred while saving the entity changes. See the inner exception for details. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): No se pueden actualizar las columnas GENERATED ALWAYS de la tabla 'Invitaciones.dbo.Evento_Invitaciones'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:80bfcd66-89da-4ab2-a8b4-e412a96a35a5
+Error Number:13537,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Edit(Int32 id, EventoInvitacione eventoInvitacione, IFormFile Archivo, IFormCollection fc) 
+ --- |url: https://localhost/EventoInvitaciones/Edit/8|action: Edit
+2023-03-28 22:47:12.6078||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 22:47:46.3900||ERROR|MRE_Invitaciones.Controllers.EventoInvitacionesController 
+An error occurred while saving the entity changes. See the inner exception for details. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): No se pueden actualizar las columnas GENERATED ALWAYS de la tabla 'Invitaciones.dbo.Evento_Invitaciones'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:84700bc0-0ce3-4f3f-a4c9-9d03d2eff80f
+Error Number:13537,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at MRE_Invitaciones.Controllers.EventoInvitacionesController.Edit(Int32 id, EventoInvitacione eventoInvitacione, IFormFile Archivo, IFormCollection fc) in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Controllers\EventoInvitacionesController.cs:line 296 
+ --- |url: https://localhost/EventoInvitaciones/Edit/8|action: Edit
+2023-03-28 22:57:21.6696||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 23:09:21.0746||DEBUG|Program 
+init main  
+ --- |url: |action: 
+2023-03-28 23:12:12.8405||DEBUG|Program 
+init main  
+ --- |url: |action: 

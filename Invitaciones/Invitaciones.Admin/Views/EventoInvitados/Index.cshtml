@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Invitaciones.Shared.Data.EventoParticipante>
+
+@{
+    ViewData["Title"] = "Index";
+    MenuModel mm = ViewBag.MenuMod;
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col">
+                <h3 class="card-title">Participantes</h3>
+            </div>
+           @* <div class="col text-right">
+                <a class="btn btn-secondary" href="/menus/create">Agregar Nuevo</a>
+            </div>*@
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12" id="partial">
+                @await Html.PartialAsync("~/Views/EventoParticipantes/create.cshtml", mm)
+            </div>
+        </div>
+          <div class="row mt-3 mb-3">
+            <div class="col-md-6">
+                <input type="text" id="usuario" name="usuario" placeholder="Filtrar " autocomplete="off" class="form-control" />
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table id="tbUsuarios" class="table ">
+                <thead>
+                    <tr>
+                        <th>Modificar</th>
+                      <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEventoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdInstitucionNavigation)
+            </th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model) {
+                        <tr>
+                            <td><button onclick="edit(@item.IdEventoParticipante)" class="btn btn-secondary">Modificar</button></td>
+              <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEventoNavigation.Evento1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdInstitucionNavigation.Nombre)
+            </td>
+                        </tr>
+                }
+                    </tbody>
+                </table>
+        </div>
+
+</div>
+</div>
+ @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+         $(document).ready(function(){
+          $("#usuario").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tbUsuarios tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+    </script>
+    
+}
+ <script>  
+       function edit (id) {  
+           $("#partial").load("@Url.Content("~")/EventoParticipantes/edit/"+id);
+        } 
+ </script>  

@@ -1,0 +1,1173 @@
+2022-09-13 23:15:15.1915 Info Message Template Auto Format enabled
+2022-09-13 23:15:15.2129 Debug Setting 'NLog.Targets.FileTarget.name' to 'allfile'
+2022-09-13 23:15:15.2129 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log'
+2022-09-13 23:15:15.2256 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2256 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.2256 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2256 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-09-13 23:15:15.2256 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}'
+2022-09-13 23:15:15.2256 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2256 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.2256 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2256 Trace Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2022-09-13 23:15:15.2256 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2022-09-13 23:15:15.2256 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2256 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.2256 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2256 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-09-13 23:15:15.2256 Trace  Scanning Property Inner '${level}' NLog.Layouts
+2022-09-13 23:15:15.2386 Trace  Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.2386 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.2386 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.2386 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2386 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.2386 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2386 Trace Scanning NewLineLayoutRenderer 'Layout Renderer: ${newline}'
+2022-09-13 23:15:15.2386 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2386 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.2563 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning NewLineLayoutRenderer 'Layout Renderer: ${newline}'
+2022-09-13 23:15:15.2563 Info Adding target FileTarget(Name=allfile)
+2022-09-13 23:15:15.2563 Debug Registered target allfile: NLog.Targets.FileTarget
+2022-09-13 23:15:15.2563 Debug Setting 'NLog.Targets.FileTarget.name' to 'ownFile-web'
+2022-09-13 23:15:15.2563 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-09-13 23:15:15.2563 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2022-09-13 23:15:15.2563 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-09-13 23:15:15.2563 Trace  Scanning Property Inner '${level}' NLog.Layouts
+2022-09-13 23:15:15.2563 Trace  Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.2563 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.2563 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning NewLineLayoutRenderer 'Layout Renderer: ${newline}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.2563 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.2563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2563 Trace Scanning NewLineLayoutRenderer 'Layout Renderer: ${newline}'
+2022-09-13 23:15:15.2697 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2697 Trace Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2022-09-13 23:15:15.2697 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.2697 Trace Scanning AspNetMvcActionRenderer 'Layout Renderer: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.2697 Info Adding target FileTarget(Name=ownFile-web)
+2022-09-13 23:15:15.2697 Debug Registered target ownFile-web: NLog.Targets.FileTarget
+2022-09-13 23:15:15.2697 Debug Setting 'NLog.Targets.NullTarget.name' to 'blackhole'
+2022-09-13 23:15:15.2697 Info Adding target NullTarget(Name=blackhole)
+2022-09-13 23:15:15.2697 Debug Registered target blackhole: NLog.Targets.NullTarget
+2022-09-13 23:15:15.3540 Debug Setting 'NLog.Targets.DatabaseTarget.name' to 'dbTarget'
+2022-09-13 23:15:15.3540 Debug Setting 'NLog.Targets.DatabaseTarget.connectionString' to 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019'
+2022-09-13 23:15:15.3540 Debug Setting 'NLog.Targets.DatabaseTarget.commandText' to 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);'
+2022-09-13 23:15:15.3540 Trace Resolves default constructor for NLog.Targets.DatabaseParameterInfo
+2022-09-13 23:15:15.3540 Trace Resolve NLog.Targets.DatabaseParameterInfo done
+2022-09-13 23:15:15.3540 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@levels'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${level}'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@operatingTime'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@operatingaddress'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${aspnet-Request-IP}'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning AspNetRequestIpLayoutRenderer 'Layout Renderer: ${aspnet-request-ip}'
+2022-09-13 23:15:15.3643 Trace  Scanning Property ForwardedForHeader 'X-Forwarded-For' NLog.Layouts
+2022-09-13 23:15:15.3643 Trace  Scanning SimpleLayout 'X-Forwarded-For'
+2022-09-13 23:15:15.3643 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.3643 Trace   Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@userid'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '1'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@logger'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${logger}'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@callSite'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${callsite}'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning CallSiteLayoutRenderer 'Layout Renderer: ${callsite}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@requesturl'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${aspnet-request-url}'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@referrerurl'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${aspnet-request}'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning AspNetRequestValueLayoutRenderer 'Layout Renderer: ${aspnet-request}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@action'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${aspnet-mvc-action}'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning AspNetMvcActionRenderer 'Layout Renderer: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@message'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${message}'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.name' to '@exception'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.Targets.DatabaseParameterInfo.layout' to '${exception:tostring}'
+2022-09-13 23:15:15.3643 Debug Setting 'NLog.LayoutRenderers.ExceptionLayoutRenderer.Format' to 'tostring'
+2022-09-13 23:15:15.3643 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.3643 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.3643 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.3643 Info Adding target DatabaseTarget(Name=dbTarget)
+2022-09-13 23:15:15.3643 Debug Registered target dbTarget: NLog.Targets.DatabaseTarget
+2022-09-13 23:15:15.3643 Trace ParseRulesElement
+2022-09-13 23:15:15.3953 Debug Watching file-filter 'NLog.config' in directory: G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0
+2022-09-13 23:15:15.3953 Debug --- NLog configuration dump ---
+2022-09-13 23:15:15.3953 Debug Targets:
+2022-09-13 23:15:15.3953 Debug FileTarget(Name=allfile)
+2022-09-13 23:15:15.3953 Debug FileTarget(Name=ownFile-web)
+2022-09-13 23:15:15.3953 Debug NullTarget(Name=blackhole)
+2022-09-13 23:15:15.3953 Debug DatabaseTarget(Name=dbTarget)
+2022-09-13 23:15:15.3953 Debug Rules:
+2022-09-13 23:15:15.3953 Debug logNamePattern: (:All) levels: [ Error Fatal ] writeTo: [ allfile ]
+2022-09-13 23:15:15.3953 Debug logNamePattern: (Microsoft.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ blackhole ]
+2022-09-13 23:15:15.3953 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ownFile-web ]
+2022-09-13 23:15:15.3953 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ dbTarget ]
+2022-09-13 23:15:15.3953 Debug --- End of NLog configuration dump ---
+2022-09-13 23:15:15.3953 Trace FindReachableObject<System.Object>:
+2022-09-13 23:15:15.3953 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Error Fatal ] writeTo: [ allfile ]'
+2022-09-13 23:15:15.3953 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-09-13 23:15:15.3953 Trace  Scanning FileTarget 'FileTarget(Name=allfile)'
+2022-09-13 23:15:15.3953 Trace   Scanning Property FileName 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log' NLog.Layouts
+2022-09-13 23:15:15.3953 Trace   Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log'
+2022-09-13 23:15:15.3953 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.3953 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.3953 Trace    Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.3953 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.3953 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-09-13 23:15:15.3953 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.3953 Trace   Scanning Property Layout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}' NLog.Layouts
+2022-09-13 23:15:15.3953 Trace   Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}'
+2022-09-13 23:15:15.3953 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-09-13 23:15:15.4105 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-09-13 23:15:15.4105 Trace     Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.4105 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.4105 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-09-13 23:15:15.4105 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace Scanning LoggingRule 'logNamePattern: (Microsoft.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ blackhole ]'
+2022-09-13 23:15:15.4105 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace  Scanning NullTarget 'NullTarget(Name=blackhole)'
+2022-09-13 23:15:15.4105 Trace   Scanning Property Layout '${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}' NLog.Layouts
+2022-09-13 23:15:15.4105 Trace   Scanning SimpleLayout '${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}'
+2022-09-13 23:15:15.4105 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.4105 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ownFile-web ]'
+2022-09-13 23:15:15.4105 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace  Scanning FileTarget 'FileTarget(Name=ownFile-web)'
+2022-09-13 23:15:15.4105 Trace   Scanning Property FileName 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log' NLog.Layouts
+2022-09-13 23:15:15.4105 Trace   Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log'
+2022-09-13 23:15:15.4105 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace   Scanning Property Layout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}' NLog.Layouts
+2022-09-13 23:15:15.4105 Trace   Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.4105 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-09-13 23:15:15.4105 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-09-13 23:15:15.4105 Trace     Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.4105 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.4105 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2022-09-13 23:15:15.4105 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4105 Trace    Scanning AspNetMvcActionRenderer 'Layout Renderer: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.4105 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-09-13 23:15:15.4105 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ dbTarget ]'
+2022-09-13 23:15:15.4105 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-09-13 23:15:15.4105 Trace  Scanning DatabaseTarget 'DatabaseTarget(Name=dbTarget)'
+2022-09-13 23:15:15.4263 Trace   Scanning Property ConnectionString 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace   Scanning SimpleLayout 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019'
+2022-09-13 23:15:15.4263 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4263 Trace   Scanning Property CommandText 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace   Scanning SimpleLayout 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);'
+2022-09-13 23:15:15.4263 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4263 Trace   Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace   Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace   Scanning Property DBHost '.' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace   Scanning SimpleLayout '.'
+2022-09-13 23:15:15.4263 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4263 Trace   Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${level}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${aspnet-Request-IP}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${aspnet-Request-IP}'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning AspNetRequestIpLayoutRenderer 'Layout Renderer: ${aspnet-request-ip}'
+2022-09-13 23:15:15.4263 Trace      Scanning Property ForwardedForHeader 'X-Forwarded-For' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace      Scanning SimpleLayout 'X-Forwarded-For'
+2022-09-13 23:15:15.4263 Trace       Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace       Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '1' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '1'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${logger}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${logger}'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${callsite}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${callsite}'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning CallSiteLayoutRenderer 'Layout Renderer: ${callsite}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${aspnet-request-url}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${aspnet-request-url}'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${aspnet-request}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${aspnet-request}'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning AspNetRequestValueLayoutRenderer 'Layout Renderer: ${aspnet-request}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${aspnet-mvc-action}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${aspnet-mvc-action}'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning AspNetMvcActionRenderer 'Layout Renderer: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${message}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${message}'
+2022-09-13 23:15:15.4263 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4263 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.4263 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4263 Trace    Scanning Property Layout '${exception:tostring}' NLog.Layouts
+2022-09-13 23:15:15.4263 Trace    Scanning SimpleLayout '${exception:tostring}'
+2022-09-13 23:15:15.4421 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4421 Trace     Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.4421 Trace      Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.4421 Trace   Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic
+2022-09-13 23:15:15.4421 Trace   Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic
+2022-09-13 23:15:15.4421 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-09-13 23:15:15.4421 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-09-13 23:15:15.4421 Info Validating config: TargetNames=allfile, blackhole, ownFile-web, dbTarget, ConfigItems=102, FilePath=G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\NLog.config
+2022-09-13 23:15:15.4421 Debug Unused target checking is started... Rule Count: 4, Target Count: 4
+2022-09-13 23:15:15.4421 Debug Unused target checking is completed. Total Rule Count: 4, Total Target Count: 4, Unused Target Count: 0
+2022-09-13 23:15:15.4421 Trace Initializing Layout Renderer: ${exception}
+2022-09-13 23:15:15.4421 Trace Initializing ${exception:tostring}
+2022-09-13 23:15:15.4421 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4421 Trace Scanning SimpleLayout '${exception:tostring}'
+2022-09-13 23:15:15.4421 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4567 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.4567 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.4567 Trace Initializing Layout Renderer: ${message}
+2022-09-13 23:15:15.4567 Trace Initializing ${message}
+2022-09-13 23:15:15.4567 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4567 Trace Scanning SimpleLayout '${message}'
+2022-09-13 23:15:15.4567 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4567 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.4567 Trace Initializing Layout Renderer: ${aspnet-mvc-action}
+2022-09-13 23:15:15.4567 Trace Initializing ${aspnet-mvc-action}
+2022-09-13 23:15:15.4567 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4567 Trace Scanning SimpleLayout '${aspnet-mvc-action}'
+2022-09-13 23:15:15.4567 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4567 Trace  Scanning AspNetMvcActionRenderer 'Layout Renderer: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.4567 Trace Initializing Layout Renderer: ${aspnet-request}
+2022-09-13 23:15:15.4567 Trace Initializing ${aspnet-request}
+2022-09-13 23:15:15.4567 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4567 Trace Scanning SimpleLayout '${aspnet-request}'
+2022-09-13 23:15:15.4567 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4567 Trace  Scanning AspNetRequestValueLayoutRenderer 'Layout Renderer: ${aspnet-request}'
+2022-09-13 23:15:15.4567 Trace Initializing Layout Renderer: ${aspnet-request-url}
+2022-09-13 23:15:15.4567 Trace Initializing ${aspnet-request-url}
+2022-09-13 23:15:15.4567 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4567 Trace Scanning SimpleLayout '${aspnet-request-url}'
+2022-09-13 23:15:15.4567 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4727 Trace  Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2022-09-13 23:15:15.4727 Trace Initializing Layout Renderer: ${callsite}
+2022-09-13 23:15:15.4727 Trace Initializing ${callsite}
+2022-09-13 23:15:15.4727 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4727 Trace Scanning SimpleLayout '${callsite}'
+2022-09-13 23:15:15.4727 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4727 Trace  Scanning CallSiteLayoutRenderer 'Layout Renderer: ${callsite}'
+2022-09-13 23:15:15.4727 Trace Initializing Layout Renderer: ${loggername}
+2022-09-13 23:15:15.4727 Trace Initializing ${logger}
+2022-09-13 23:15:15.4727 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4727 Trace Scanning SimpleLayout '${logger}'
+2022-09-13 23:15:15.4727 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4727 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.4727 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.4727 Trace Initializing 1
+2022-09-13 23:15:15.4727 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4727 Trace Scanning SimpleLayout '1'
+2022-09-13 23:15:15.4727 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4727 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4727 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.4727 Trace Initializing X-Forwarded-For
+2022-09-13 23:15:15.4727 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4727 Trace Scanning SimpleLayout 'X-Forwarded-For'
+2022-09-13 23:15:15.4727 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4727 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4727 Trace Initializing Layout Renderer: ${aspnet-request-ip}
+2022-09-13 23:15:15.4727 Trace Initializing ${aspnet-Request-IP}
+2022-09-13 23:15:15.4727 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4727 Trace Scanning SimpleLayout '${aspnet-Request-IP}'
+2022-09-13 23:15:15.4727 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4727 Trace  Scanning AspNetRequestIpLayoutRenderer 'Layout Renderer: ${aspnet-request-ip}'
+2022-09-13 23:15:15.4727 Trace   Scanning Property ForwardedForHeader 'X-Forwarded-For' NLog.Layouts
+2022-09-13 23:15:15.4727 Trace   Scanning SimpleLayout 'X-Forwarded-For'
+2022-09-13 23:15:15.4727 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4727 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4727 Trace Initializing Layout Renderer: ${date}
+2022-09-13 23:15:15.4727 Trace Initializing ${date:format=dd/MM/yyyy HH\:mm\:ss.fff}
+2022-09-13 23:15:15.4727 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4727 Trace Scanning SimpleLayout '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}'
+2022-09-13 23:15:15.4727 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4892 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.4892 Trace Initializing Layout Renderer: ${level}
+2022-09-13 23:15:15.4892 Trace Initializing ${level}
+2022-09-13 23:15:15.4892 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4892 Trace Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.4892 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4892 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.4892 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.4892 Trace Initializing .
+2022-09-13 23:15:15.4892 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4892 Trace Scanning SimpleLayout '.'
+2022-09-13 23:15:15.4892 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4892 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4892 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.4892 Trace Initializing insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);
+2022-09-13 23:15:15.4892 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4892 Trace Scanning SimpleLayout 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);'
+2022-09-13 23:15:15.4892 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4892 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4892 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.4892 Trace Initializing Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019
+2022-09-13 23:15:15.4892 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.4892 Trace Scanning SimpleLayout 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019'
+2022-09-13 23:15:15.4892 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.4892 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.4892 Trace Initializing DatabaseTarget(Name=dbTarget)
+2022-09-13 23:15:15.4892 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-09-13 23:15:15.4892 Trace Scanning DatabaseTarget 'DatabaseTarget(Name=dbTarget)'
+2022-09-13 23:15:15.4892 Trace  Scanning Property ConnectionString 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019' NLog.Layouts
+2022-09-13 23:15:15.4892 Trace  Scanning SimpleLayout 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019'
+2022-09-13 23:15:15.4892 Trace  Scanning Property CommandText 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);' NLog.Layouts
+2022-09-13 23:15:15.4892 Trace  Scanning SimpleLayout 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);'
+2022-09-13 23:15:15.4892 Trace  Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic
+2022-09-13 23:15:15.4892 Trace  Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic
+2022-09-13 23:15:15.4892 Trace  Scanning Property DBHost '.' NLog.Layouts
+2022-09-13 23:15:15.4892 Trace  Scanning SimpleLayout '.'
+2022-09-13 23:15:15.4892 Trace  Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic
+2022-09-13 23:15:15.4892 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4892 Trace   Scanning Property Layout '${level}' NLog.Layouts
+2022-09-13 23:15:15.4892 Trace   Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.4892 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.4892 Trace   Scanning Property Layout '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}' NLog.Layouts
+2022-09-13 23:15:15.4892 Trace   Scanning SimpleLayout '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}'
+2022-09-13 23:15:15.5037 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.5037 Trace   Scanning Property Layout '${aspnet-Request-IP}' NLog.Layouts
+2022-09-13 23:15:15.5037 Trace   Scanning SimpleLayout '${aspnet-Request-IP}'
+2022-09-13 23:15:15.5037 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.5037 Trace   Scanning Property Layout '1' NLog.Layouts
+2022-09-13 23:15:15.5037 Trace   Scanning SimpleLayout '1'
+2022-09-13 23:15:15.5037 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.5037 Trace   Scanning Property Layout '${logger}' NLog.Layouts
+2022-09-13 23:15:15.5037 Trace   Scanning SimpleLayout '${logger}'
+2022-09-13 23:15:15.5037 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.5037 Trace   Scanning Property Layout '${callsite}' NLog.Layouts
+2022-09-13 23:15:15.5037 Trace   Scanning SimpleLayout '${callsite}'
+2022-09-13 23:15:15.5037 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.5037 Trace   Scanning Property Layout '${aspnet-request-url}' NLog.Layouts
+2022-09-13 23:15:15.5037 Trace   Scanning SimpleLayout '${aspnet-request-url}'
+2022-09-13 23:15:15.5037 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.5037 Trace   Scanning Property Layout '${aspnet-request}' NLog.Layouts
+2022-09-13 23:15:15.5037 Trace   Scanning SimpleLayout '${aspnet-request}'
+2022-09-13 23:15:15.5037 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.5037 Trace   Scanning Property Layout '${aspnet-mvc-action}' NLog.Layouts
+2022-09-13 23:15:15.5037 Trace   Scanning SimpleLayout '${aspnet-mvc-action}'
+2022-09-13 23:15:15.5037 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.5037 Trace   Scanning Property Layout '${message}' NLog.Layouts
+2022-09-13 23:15:15.5037 Trace   Scanning SimpleLayout '${message}'
+2022-09-13 23:15:15.5037 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:15.5037 Trace   Scanning Property Layout '${exception:tostring}' NLog.Layouts
+2022-09-13 23:15:15.5037 Trace   Scanning SimpleLayout '${exception:tostring}'
+2022-09-13 23:15:15.5037 Trace  Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic
+2022-09-13 23:15:15.5037 Trace  Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic
+2022-09-13 23:15:15.5037 Trace DatabaseTarget(Name=dbTarget) has 14 layouts
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${aspnet-mvc-action}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${aspnet-request-url}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${exception}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${message}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${loggername}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${level}
+2022-09-13 23:15:15.5211 Trace Initializing ${level}
+2022-09-13 23:15:15.5211 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.5211 Trace Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.5211 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.5211 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${uppercase}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${event-properties}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5211 Trace Initializing Layout Renderer: ${longdate}
+2022-09-13 23:15:15.5211 Trace Initializing ${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}
+2022-09-13 23:15:15.5211 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.5211 Trace Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.5211 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.5211 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.5211 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5211 Trace  Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2022-09-13 23:15:15.5211 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5211 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-09-13 23:15:15.5211 Trace   Scanning Property Inner '${level}' NLog.Layouts
+2022-09-13 23:15:15.5211 Trace   Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.5211 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.5211 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.5211 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5211 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.5211 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5359 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.5359 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5359 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.5359 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.5359 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5359 Trace  Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2022-09-13 23:15:15.5359 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5359 Trace  Scanning AspNetMvcActionRenderer 'Layout Renderer: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${shortdate}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${date}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5359 Trace Initializing Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log
+2022-09-13 23:15:15.5359 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.5359 Trace Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log'
+2022-09-13 23:15:15.5359 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.5359 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5359 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.5359 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5359 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-09-13 23:15:15.5359 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5359 Trace Initializing FileTarget(Name=ownFile-web)
+2022-09-13 23:15:15.5359 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-09-13 23:15:15.5359 Trace Scanning FileTarget 'FileTarget(Name=ownFile-web)'
+2022-09-13 23:15:15.5359 Trace  Scanning Property FileName 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log' NLog.Layouts
+2022-09-13 23:15:15.5359 Trace  Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log'
+2022-09-13 23:15:15.5359 Trace  Scanning Property Layout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}' NLog.Layouts
+2022-09-13 23:15:15.5359 Trace  Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.5359 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-09-13 23:15:15.5359 Trace FileTarget(Name=ownFile-web) has 2 layouts
+2022-09-13 23:15:15.5359 Trace FileTarget(Name=ownFile-web): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${message}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${loggername}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${level}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5359 Trace Initializing Layout Renderer: ${longdate}
+2022-09-13 23:15:15.5359 Trace Initializing ${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}
+2022-09-13 23:15:15.5359 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.5359 Trace Scanning SimpleLayout '${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}'
+2022-09-13 23:15:15.5505 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.5505 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.5505 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5505 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.5505 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5505 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.5505 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5505 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.5505 Trace Initializing NullTarget(Name=blackhole)
+2022-09-13 23:15:15.5505 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-09-13 23:15:15.5505 Trace Scanning NullTarget 'NullTarget(Name=blackhole)'
+2022-09-13 23:15:15.5505 Trace  Scanning Property Layout '${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}' NLog.Layouts
+2022-09-13 23:15:15.5505 Trace  Scanning SimpleLayout '${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}'
+2022-09-13 23:15:15.5505 Trace NullTarget(Name=blackhole) has 1 layouts
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${exception}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${message}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${loggername}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${level}
+2022-09-13 23:15:15.5505 Trace Initializing ${level}
+2022-09-13 23:15:15.5505 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.5505 Trace Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.5505 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.5505 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${uppercase}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${event-properties}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5505 Trace Initializing Layout Renderer: ${longdate}
+2022-09-13 23:15:15.5666 Trace Initializing ${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}
+2022-09-13 23:15:15.5666 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.5666 Trace Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}'
+2022-09-13 23:15:15.5666 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.5666 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.5666 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5666 Trace  Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2022-09-13 23:15:15.5666 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5666 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-09-13 23:15:15.5666 Trace   Scanning Property Inner '${level}' NLog.Layouts
+2022-09-13 23:15:15.5666 Trace   Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.5666 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.5666 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.5666 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5666 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.5666 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5666 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.5666 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5666 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.5666 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.5666 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5666 Trace Initializing Layout Renderer: ${shortdate}
+2022-09-13 23:15:15.5666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5666 Trace Initializing Layout Renderer: ${date}
+2022-09-13 23:15:15.5666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:15.5666 Trace Initializing Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log
+2022-09-13 23:15:15.5666 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-09-13 23:15:15.5666 Trace Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log'
+2022-09-13 23:15:15.5666 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.5666 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5666 Trace  Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.5666 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5666 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-09-13 23:15:15.5666 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.5666 Trace Initializing FileTarget(Name=allfile)
+2022-09-13 23:15:15.5666 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-09-13 23:15:15.5666 Trace Scanning FileTarget 'FileTarget(Name=allfile)'
+2022-09-13 23:15:15.5666 Trace  Scanning Property FileName 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log' NLog.Layouts
+2022-09-13 23:15:15.5666 Trace  Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log'
+2022-09-13 23:15:15.5666 Trace  Scanning Property Layout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}' NLog.Layouts
+2022-09-13 23:15:15.5666 Trace  Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}'
+2022-09-13 23:15:15.5666 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-09-13 23:15:15.5666 Trace FileTarget(Name=allfile) has 2 layouts
+2022-09-13 23:15:15.5666 Trace FileTarget(Name=allfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2022-09-13 23:15:15.5909 Debug Targets configured when LogLevel >= Trace for Logger: Program
+2022-09-13 23:15:15.5909 Debug Logger Program [Trace] => ownFile-web dbTarget
+2022-09-13 23:15:15.5909 Debug Logger Program [Debug] => ownFile-web dbTarget
+2022-09-13 23:15:15.5909 Debug Logger Program [Info] => ownFile-web dbTarget
+2022-09-13 23:15:15.5909 Debug Logger Program [Warn] => ownFile-web dbTarget
+2022-09-13 23:15:15.5909 Debug Logger Program [Error] => allfile ownFile-web dbTarget
+2022-09-13 23:15:15.5909 Debug Logger Program [Fatal] => allfile ownFile-web dbTarget
+2022-09-13 23:15:15.6102 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2022-09-13 23:15:15.6102 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2022-09-13 23:15:15.6147 Debug FileTarget(Name=ownFile-web): Preparing for new file 'G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-own-2022-09-13.log'
+2022-09-13 23:15:15.6147 Debug FileTarget(Name=ownFile-web): Creating file appender: G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-own-2022-09-13.log
+2022-09-13 23:15:15.6147 Trace FileTarget(Name=ownFile-web): Opening G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-own-2022-09-13.log with allowFileSharedWriting=False
+2022-09-13 23:15:15.6147 Debug FileTarget(Name=ownFile-web): DirectoryNotFoundException - Attempting to create directory for FileName: G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-own-2022-09-13.log
+2022-09-13 23:15:15.6147 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2022-09-13 23:15:15.8010 Trace DatabaseTarget(Name=dbTarget): Executing Text: insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);
+2022-09-13 23:15:15.8010 Trace   DatabaseTarget: Parameter: '@levels' = 'Debug' (String)
+2022-09-13 23:15:15.8010 Trace   DatabaseTarget: Parameter: '@operatingTime' = '13/09/2022 23:15:15.590' (String)
+2022-09-13 23:15:15.8010 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2022-09-13 23:15:15.8010 Trace   DatabaseTarget: Parameter: '@operatingaddress' = '' (String)
+2022-09-13 23:15:15.8010 Trace   DatabaseTarget: Parameter: '@userid' = '1' (String)
+2022-09-13 23:15:15.8010 Trace   DatabaseTarget: Parameter: '@logger' = 'Program' (String)
+2022-09-13 23:15:15.8010 Trace   DatabaseTarget: Parameter: '@callSite' = 'Program.<Main>$' (String)
+2022-09-13 23:15:15.8010 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2022-09-13 23:15:15.8010 Trace   DatabaseTarget: Parameter: '@requesturl' = '' (String)
+2022-09-13 23:15:15.8010 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2022-09-13 23:15:15.8010 Trace   DatabaseTarget: Parameter: '@referrerurl' = '' (String)
+2022-09-13 23:15:15.8168 Debug ServiceProvider has not been registered. Cannot resolve: Microsoft.AspNetCore.Http.IHttpContextAccessor
+2022-09-13 23:15:15.8168 Trace   DatabaseTarget: Parameter: '@action' = '' (String)
+2022-09-13 23:15:15.8168 Trace   DatabaseTarget: Parameter: '@message' = 'init main' (String)
+2022-09-13 23:15:15.8168 Trace   DatabaseTarget: Parameter: '@exception' = '' (String)
+2022-09-13 23:15:15.8874 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2022-09-13 23:15:15.8874 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2022-09-13 23:15:15.9366 Debug ScanAssembly('NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-09-13 23:15:15.9366 Trace Assembly 'NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2022-09-13 23:15:15.9721 Debug Hide assemblies for callsite
+2022-09-13 23:15:15.9721 Debug ScanAssembly('NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-09-13 23:15:15.9755 Trace Assembly 'NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2022-09-13 23:15:15.9755 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-09-13 23:15:15.9755 Trace Assembly 'Microsoft.Extensions.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-09-13 23:15:15.9755 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2022-09-13 23:15:15.9755 Trace FindReachableObject<System.Object>:
+2022-09-13 23:15:15.9755 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Error Fatal ] writeTo: [ allfile ]'
+2022-09-13 23:15:15.9755 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-09-13 23:15:15.9755 Trace  Scanning FileTarget 'FileTarget(Name=allfile)'
+2022-09-13 23:15:15.9755 Trace   Scanning Property FileName 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log' NLog.Layouts
+2022-09-13 23:15:15.9755 Trace   Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log'
+2022-09-13 23:15:15.9755 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.9755 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9755 Trace    Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.9755 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9755 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-09-13 23:15:15.9755 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9755 Trace   Scanning Property Layout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}' NLog.Layouts
+2022-09-13 23:15:15.9755 Trace   Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}'
+2022-09-13 23:15:15.9755 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.9755 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.9755 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9755 Trace    Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2022-09-13 23:15:15.9755 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9755 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-09-13 23:15:15.9755 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-09-13 23:15:15.9755 Trace     Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.9755 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.9755 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.9755 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9755 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.9755 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9755 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.9879 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-09-13 23:15:15.9879 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace Scanning LoggingRule 'logNamePattern: (Microsoft.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ blackhole ]'
+2022-09-13 23:15:15.9879 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace  Scanning NullTarget 'NullTarget(Name=blackhole)'
+2022-09-13 23:15:15.9879 Trace   Scanning Property Layout '${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}' NLog.Layouts
+2022-09-13 23:15:15.9879 Trace   Scanning SimpleLayout '${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}'
+2022-09-13 23:15:15.9879 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.9879 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ownFile-web ]'
+2022-09-13 23:15:15.9879 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace  Scanning FileTarget 'FileTarget(Name=ownFile-web)'
+2022-09-13 23:15:15.9879 Trace   Scanning Property FileName 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log' NLog.Layouts
+2022-09-13 23:15:15.9879 Trace   Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log'
+2022-09-13 23:15:15.9879 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace   Scanning Property Layout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}' NLog.Layouts
+2022-09-13 23:15:15.9879 Trace   Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.9879 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-09-13 23:15:15.9879 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-09-13 23:15:15.9879 Trace     Scanning SimpleLayout '${level}'
+2022-09-13 23:15:15.9879 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:15.9879 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2022-09-13 23:15:15.9879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:15.9879 Trace    Scanning AspNetMvcActionRenderer 'Layout Renderer: ${aspnet-mvc-action}'
+2022-09-13 23:15:15.9879 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-09-13 23:15:15.9879 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ dbTarget ]'
+2022-09-13 23:15:15.9879 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-09-13 23:15:15.9879 Trace  Scanning DatabaseTarget 'DatabaseTarget(Name=dbTarget)'
+2022-09-13 23:15:15.9879 Trace   Scanning Property ConnectionString 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019' NLog.Layouts
+2022-09-13 23:15:15.9879 Trace   Scanning SimpleLayout 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019'
+2022-09-13 23:15:15.9879 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:16.0039 Trace   Scanning Property CommandText 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace   Scanning SimpleLayout 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);'
+2022-09-13 23:15:16.0039 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:16.0039 Trace   Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace   Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace   Scanning Property DBHost '.' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace   Scanning SimpleLayout '.'
+2022-09-13 23:15:16.0039 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:16.0039 Trace   Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0039 Trace    Scanning Property Layout '${level}' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace    Scanning SimpleLayout '${level}'
+2022-09-13 23:15:16.0039 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace     Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0039 Trace    Scanning Property Layout '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace    Scanning SimpleLayout '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}'
+2022-09-13 23:15:16.0039 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0039 Trace    Scanning Property Layout '${aspnet-Request-IP}' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace    Scanning SimpleLayout '${aspnet-Request-IP}'
+2022-09-13 23:15:16.0039 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace     Scanning AspNetRequestIpLayoutRenderer 'Layout Renderer: ${aspnet-request-ip}'
+2022-09-13 23:15:16.0039 Trace      Scanning Property ForwardedForHeader 'X-Forwarded-For' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace      Scanning SimpleLayout 'X-Forwarded-For'
+2022-09-13 23:15:16.0039 Trace       Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace       Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0039 Trace    Scanning Property Layout '1' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace    Scanning SimpleLayout '1'
+2022-09-13 23:15:16.0039 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0039 Trace    Scanning Property Layout '${logger}' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace    Scanning SimpleLayout '${logger}'
+2022-09-13 23:15:16.0039 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace     Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0039 Trace    Scanning Property Layout '${callsite}' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace    Scanning SimpleLayout '${callsite}'
+2022-09-13 23:15:16.0039 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace     Scanning CallSiteLayoutRenderer 'Layout Renderer: ${callsite}'
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0039 Trace    Scanning Property Layout '${aspnet-request-url}' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace    Scanning SimpleLayout '${aspnet-request-url}'
+2022-09-13 23:15:16.0039 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace     Scanning AspNetRequestUrlRenderer 'Layout Renderer: ${aspnet-request-url}'
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0039 Trace    Scanning Property Layout '${aspnet-request}' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace    Scanning SimpleLayout '${aspnet-request}'
+2022-09-13 23:15:16.0039 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace     Scanning AspNetRequestValueLayoutRenderer 'Layout Renderer: ${aspnet-request}'
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0039 Trace    Scanning Property Layout '${aspnet-mvc-action}' NLog.Layouts
+2022-09-13 23:15:16.0039 Trace    Scanning SimpleLayout '${aspnet-mvc-action}'
+2022-09-13 23:15:16.0039 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0039 Trace     Scanning AspNetMvcActionRenderer 'Layout Renderer: ${aspnet-mvc-action}'
+2022-09-13 23:15:16.0039 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0197 Trace    Scanning Property Layout '${message}' NLog.Layouts
+2022-09-13 23:15:16.0197 Trace    Scanning SimpleLayout '${message}'
+2022-09-13 23:15:16.0197 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0197 Trace     Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-09-13 23:15:16.0197 Trace   Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0197 Trace    Scanning Property Layout '${exception:tostring}' NLog.Layouts
+2022-09-13 23:15:16.0197 Trace    Scanning SimpleLayout '${exception:tostring}'
+2022-09-13 23:15:16.0197 Trace     Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-09-13 23:15:16.0197 Trace     Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2022-09-13 23:15:16.0197 Trace      Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2022-09-13 23:15:16.0197 Trace   Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0197 Trace   Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0197 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-09-13 23:15:16.0197 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-09-13 23:15:16.0197 Info Validating config: TargetNames=allfile, blackhole, ownFile-web, dbTarget, ConfigItems=102, FilePath=G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\NLog.config
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${exception}
+2022-09-13 23:15:16.0197 Trace Initializing ${exception:tostring}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${message}
+2022-09-13 23:15:16.0197 Trace Initializing ${message}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${aspnet-mvc-action}
+2022-09-13 23:15:16.0197 Trace Initializing ${aspnet-mvc-action}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${aspnet-request}
+2022-09-13 23:15:16.0197 Trace Initializing ${aspnet-request}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${aspnet-request-url}
+2022-09-13 23:15:16.0197 Trace Initializing ${aspnet-request-url}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${callsite}
+2022-09-13 23:15:16.0197 Trace Initializing ${callsite}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${loggername}
+2022-09-13 23:15:16.0197 Trace Initializing ${logger}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0197 Trace Initializing 1
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0197 Trace Initializing X-Forwarded-For
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${aspnet-request-ip}
+2022-09-13 23:15:16.0197 Trace Initializing ${aspnet-Request-IP}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${date}
+2022-09-13 23:15:16.0197 Trace Initializing ${date:format=dd/MM/yyyy HH\:mm\:ss.fff}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${level}
+2022-09-13 23:15:16.0197 Trace Initializing ${level}
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0197 Trace Initializing .
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0197 Trace Initializing insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);
+2022-09-13 23:15:16.0197 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0197 Trace Initializing Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019
+2022-09-13 23:15:16.0197 Trace Initializing DatabaseTarget(Name=dbTarget)
+2022-09-13 23:15:16.0197 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-09-13 23:15:16.0197 Trace Scanning DatabaseTarget 'DatabaseTarget(Name=dbTarget)'
+2022-09-13 23:15:16.0197 Trace  Scanning Property ConnectionString 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019' NLog.Layouts
+2022-09-13 23:15:16.0197 Trace  Scanning SimpleLayout 'Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019'
+2022-09-13 23:15:16.0347 Trace  Scanning Property CommandText 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace  Scanning SimpleLayout 'insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);'
+2022-09-13 23:15:16.0347 Trace  Scanning Property InstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0347 Trace  Scanning Property UninstallDdlCommands 'System.Collections.Generic.List`1[NLog.Targets.DatabaseCommandInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0347 Trace  Scanning Property DBHost '.' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace  Scanning SimpleLayout '.'
+2022-09-13 23:15:16.0347 Trace  Scanning Property Parameters 'System.Collections.Generic.List`1[NLog.Targets.DatabaseParameterInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0347 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0347 Trace   Scanning Property Layout '${level}' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace   Scanning SimpleLayout '${level}'
+2022-09-13 23:15:16.0347 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0347 Trace   Scanning Property Layout '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace   Scanning SimpleLayout '${date:format=dd/MM/yyyy HH\:mm\:ss.fff}'
+2022-09-13 23:15:16.0347 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0347 Trace   Scanning Property Layout '${aspnet-Request-IP}' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace   Scanning SimpleLayout '${aspnet-Request-IP}'
+2022-09-13 23:15:16.0347 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0347 Trace   Scanning Property Layout '1' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace   Scanning SimpleLayout '1'
+2022-09-13 23:15:16.0347 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0347 Trace   Scanning Property Layout '${logger}' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace   Scanning SimpleLayout '${logger}'
+2022-09-13 23:15:16.0347 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0347 Trace   Scanning Property Layout '${callsite}' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace   Scanning SimpleLayout '${callsite}'
+2022-09-13 23:15:16.0347 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0347 Trace   Scanning Property Layout '${aspnet-request-url}' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace   Scanning SimpleLayout '${aspnet-request-url}'
+2022-09-13 23:15:16.0347 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0347 Trace   Scanning Property Layout '${aspnet-request}' NLog.Layouts
+2022-09-13 23:15:16.0347 Trace   Scanning SimpleLayout '${aspnet-request}'
+2022-09-13 23:15:16.0506 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0506 Trace   Scanning Property Layout '${aspnet-mvc-action}' NLog.Layouts
+2022-09-13 23:15:16.0506 Trace   Scanning SimpleLayout '${aspnet-mvc-action}'
+2022-09-13 23:15:16.0506 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0506 Trace   Scanning Property Layout '${message}' NLog.Layouts
+2022-09-13 23:15:16.0506 Trace   Scanning SimpleLayout '${message}'
+2022-09-13 23:15:16.0506 Trace  Scanning DatabaseParameterInfo 'NLog.Targets.DatabaseParameterInfo'
+2022-09-13 23:15:16.0506 Trace   Scanning Property Layout '${exception:tostring}' NLog.Layouts
+2022-09-13 23:15:16.0506 Trace   Scanning SimpleLayout '${exception:tostring}'
+2022-09-13 23:15:16.0506 Trace  Scanning Property ConnectionProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0506 Trace  Scanning Property CommandProperties 'System.Collections.Generic.List`1[NLog.Targets.DatabaseObjectPropertyInfo]' System.Collections.Generic
+2022-09-13 23:15:16.0506 Trace DatabaseTarget(Name=dbTarget) has 14 layouts
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${aspnet-mvc-action}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${aspnet-request-url}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${exception}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${message}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${loggername}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${level}
+2022-09-13 23:15:16.0506 Trace Initializing ${level}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${uppercase}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${event-properties}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${longdate}
+2022-09-13 23:15:16.0506 Trace Initializing ${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}
+2022-09-13 23:15:16.0506 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${shortdate}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${date}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log
+2022-09-13 23:15:16.0666 Trace Initializing FileTarget(Name=ownFile-web)
+2022-09-13 23:15:16.0666 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-09-13 23:15:16.0666 Trace Scanning FileTarget 'FileTarget(Name=ownFile-web)'
+2022-09-13 23:15:16.0666 Trace  Scanning Property FileName 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log' NLog.Layouts
+2022-09-13 23:15:16.0666 Trace  Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log'
+2022-09-13 23:15:16.0666 Trace  Scanning Property Layout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}' NLog.Layouts
+2022-09-13 23:15:16.0666 Trace  Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}'
+2022-09-13 23:15:16.0666 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-09-13 23:15:16.0666 Trace FileTarget(Name=ownFile-web) has 2 layouts
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${message}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${loggername}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${level}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${longdate}
+2022-09-13 23:15:16.0666 Trace Initializing ${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}
+2022-09-13 23:15:16.0666 Trace Initializing NullTarget(Name=blackhole)
+2022-09-13 23:15:16.0666 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-09-13 23:15:16.0666 Trace Scanning NullTarget 'NullTarget(Name=blackhole)'
+2022-09-13 23:15:16.0666 Trace  Scanning Property Layout '${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}' NLog.Layouts
+2022-09-13 23:15:16.0666 Trace  Scanning SimpleLayout '${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}'
+2022-09-13 23:15:16.0666 Trace NullTarget(Name=blackhole) has 1 layouts
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${exception}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${message}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${loggername}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${level}
+2022-09-13 23:15:16.0666 Trace Initializing ${level}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${uppercase}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${event-properties}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${longdate}
+2022-09-13 23:15:16.0666 Trace Initializing ${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${shortdate}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${date}
+2022-09-13 23:15:16.0666 Trace Initializing Layout Renderer: ${literal}
+2022-09-13 23:15:16.0666 Trace Initializing Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log
+2022-09-13 23:15:16.0666 Trace Initializing FileTarget(Name=allfile)
+2022-09-13 23:15:16.0817 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-09-13 23:15:16.0817 Trace Scanning FileTarget 'FileTarget(Name=allfile)'
+2022-09-13 23:15:16.0817 Trace  Scanning Property FileName 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log' NLog.Layouts
+2022-09-13 23:15:16.0817 Trace  Scanning SimpleLayout 'Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log'
+2022-09-13 23:15:16.0817 Trace  Scanning Property Layout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}' NLog.Layouts
+2022-09-13 23:15:16.0817 Trace  Scanning SimpleLayout '${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}'
+2022-09-13 23:15:16.0817 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-09-13 23:15:16.0817 Trace FileTarget(Name=allfile) has 2 layouts
+2022-09-13 23:15:16.0817 Debug Targets configured when LogLevel >= Trace for Logger: Program
+2022-09-13 23:15:16.0817 Debug Logger Program [Trace] => ownFile-web dbTarget
+2022-09-13 23:15:16.0817 Debug Logger Program [Debug] => ownFile-web dbTarget
+2022-09-13 23:15:16.0817 Debug Logger Program [Info] => ownFile-web dbTarget
+2022-09-13 23:15:16.0817 Debug Logger Program [Warn] => ownFile-web dbTarget
+2022-09-13 23:15:16.0817 Debug Logger Program [Error] => allfile ownFile-web dbTarget
+2022-09-13 23:15:16.0817 Debug Logger Program [Fatal] => allfile ownFile-web dbTarget
+2022-09-13 23:15:16.0817 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Trace] => blackhole
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Debug] => blackhole
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => blackhole
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => blackhole
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => allfile blackhole
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => allfile blackhole
+2022-09-13 23:15:16.0817 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Trace] => blackhole
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Debug] => blackhole
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => blackhole
+2022-09-13 23:15:16.0817 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => blackhole
+2022-09-13 23:15:16.0975 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => allfile blackhole
+2022-09-13 23:15:16.0975 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => allfile blackhole
+2022-09-13 23:15:16.0975 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Hosting.Lifetime
+2022-09-13 23:15:16.0975 Debug Logger Microsoft.Hosting.Lifetime [Trace] => blackhole
+2022-09-13 23:15:16.0975 Debug Logger Microsoft.Hosting.Lifetime [Debug] => blackhole
+2022-09-13 23:15:16.0975 Debug Logger Microsoft.Hosting.Lifetime [Info] => blackhole
+2022-09-13 23:15:16.0975 Debug Logger Microsoft.Hosting.Lifetime [Warn] => blackhole
+2022-09-13 23:15:16.0975 Debug Logger Microsoft.Hosting.Lifetime [Error] => allfile blackhole
+2022-09-13 23:15:16.0975 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => allfile blackhole
+2022-09-13 23:15:16.2248 Debug FileTarget(Name=allfile): Preparing for new file 'G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-all-2022-09-13.log'
+2022-09-13 23:15:16.2248 Debug FileTarget(Name=allfile): Creating file appender: G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-all-2022-09-13.log
+2022-09-13 23:15:16.2248 Trace FileTarget(Name=allfile): Opening G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-all-2022-09-13.log with allowFileSharedWriting=False
+2022-09-13 23:15:16.2248 Debug No available HttpContext, because outside valid request context. Logger: Program
+2022-09-13 23:15:16.2248 Debug No available HttpContext, because outside valid request context. Logger: Program
+2022-09-13 23:15:16.2248 Trace DatabaseTarget(Name=dbTarget): Open connection.
+2022-09-13 23:15:16.2248 Trace DatabaseTarget(Name=dbTarget): Executing Text: insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@levels' = 'Error' (String)
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@operatingTime' = '13/09/2022 23:15:16.097' (String)
+2022-09-13 23:15:16.2248 Debug No available HttpContext, because outside valid request context. Logger: Program
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@operatingaddress' = '' (String)
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@userid' = '1' (String)
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@logger' = 'Program' (String)
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@callSite' = 'Program.<Main>$' (String)
+2022-09-13 23:15:16.2248 Debug No available HttpContext, because outside valid request context. Logger: Program
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@requesturl' = '' (String)
+2022-09-13 23:15:16.2248 Debug No available HttpContext, because outside valid request context. Logger: Program
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@referrerurl' = '' (String)
+2022-09-13 23:15:16.2248 Debug No available HttpContext, because outside valid request context. Logger: Program
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@action' = '' (String)
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@message' = 'Stopped program because of exception' (String)
+2022-09-13 23:15:16.2248 Trace   DatabaseTarget: Parameter: '@exception' = 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\MRE-Invitaciones\Program.cs:line 45' (String)
+2022-09-13 23:15:16.2248 Trace DatabaseTarget(Name=dbTarget): Finished execution, result = 1
+2022-09-13 23:15:16.2248 Trace DatabaseTarget(Name=dbTarget): Close connection (KeepConnection = false).
+2022-09-13 23:15:16.2392 Info Shutdown() called. Logger closing...
+2022-09-13 23:15:16.2392 Info Closing old configuration.
+2022-09-13 23:15:16.2392 Debug LogFactory Flush with timeout=15 secs
+2022-09-13 23:15:16.2392 Trace Flushing all 4 targets...
+2022-09-13 23:15:16.2392 Trace ForEachItemInParallel() 4 items
+2022-09-13 23:15:16.2392 Trace FileTarget(Name=allfile): FlushAsync
+2022-09-13 23:15:16.2392 Trace Continuation invoked: 
+2022-09-13 23:15:16.2392 Trace Parallel task completed. 3 items remaining
+2022-09-13 23:15:16.2392 Trace Continuation invoked: 
+2022-09-13 23:15:16.2392 Trace FileTarget(Name=ownFile-web): FlushAsync
+2022-09-13 23:15:16.2392 Trace Continuation invoked: 
+2022-09-13 23:15:16.2392 Trace Parallel task completed. 2 items remaining
+2022-09-13 23:15:16.2392 Trace Parallel task completed. 1 items remaining
+2022-09-13 23:15:16.2392 Trace FileTarget(Name=allfile): FlushAsync Done
+2022-09-13 23:15:16.2392 Trace FileTarget(Name=ownFile-web): FlushAsync Done
+2022-09-13 23:15:16.2392 Trace Continuation invoked: 
+2022-09-13 23:15:16.2392 Trace Parallel task completed. 0 items remaining
+2022-09-13 23:15:16.2392 Debug Flush completed
+2022-09-13 23:15:16.2392 Debug Closing logging configuration...
+2022-09-13 23:15:16.2392 Trace Closing FileTarget(Name=allfile)
+2022-09-13 23:15:16.2392 Debug FileTarget(Name=allfile): Closing...
+2022-09-13 23:15:16.2547 Trace FileTarget(Name=allfile): FinalizeFile 'G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-all-2022-09-13.log, isArchiving: False'
+2022-09-13 23:15:16.2547 Debug FileTarget(Name=allfile): FileAppender Closing Invalidate - G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-all-2022-09-13.log
+2022-09-13 23:15:16.2547 Trace FileTarget: Closing 'G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-all-2022-09-13.log'
+2022-09-13 23:15:16.2547 Debug FileTarget(Name=allfile): Closed.
+2022-09-13 23:15:16.2547 Trace Closing Logs/${date:format=yyyyMM}/nlog-all-${shortdate}.log
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${date}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${shortdate}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2547 Trace Closing ${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${longdate}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${event-properties}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${uppercase}
+2022-09-13 23:15:16.2547 Trace Closing ${level}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${level}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${loggername}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${message}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${exception}
+2022-09-13 23:15:16.2547 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2547 Trace Closing NullTarget(Name=blackhole)
+2022-09-13 23:15:16.2547 Debug NullTarget(Name=blackhole): Closing...
+2022-09-13 23:15:16.2695 Debug NullTarget(Name=blackhole): Closed.
+2022-09-13 23:15:16.2695 Trace Closing ${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${longdate}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${level}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${loggername}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${message}
+2022-09-13 23:15:16.2695 Trace Closing FileTarget(Name=ownFile-web)
+2022-09-13 23:15:16.2695 Debug FileTarget(Name=ownFile-web): Closing...
+2022-09-13 23:15:16.2695 Trace FileTarget(Name=ownFile-web): FinalizeFile 'G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-own-2022-09-13.log, isArchiving: False'
+2022-09-13 23:15:16.2695 Debug FileTarget(Name=ownFile-web): FileAppender Closing Invalidate - G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-own-2022-09-13.log
+2022-09-13 23:15:16.2695 Trace FileTarget: Closing 'G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0\Logs/202209/nlog-own-2022-09-13.log'
+2022-09-13 23:15:16.2695 Debug FileTarget(Name=ownFile-web): Closed.
+2022-09-13 23:15:16.2695 Trace Closing Logs/${date:format=yyyyMM}/nlog-own-${shortdate}.log
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${date}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${shortdate}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing ${longdate}|${event-properties:item=EventId.Id}|${uppercase:${level}}|${logger} ${newline}${message} ${exception} ${newline} --- |url: ${aspnet-request-url}|action: ${aspnet-mvc-action}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${longdate}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${event-properties}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${uppercase}
+2022-09-13 23:15:16.2695 Trace Closing ${level}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${level}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${loggername}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${message}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${exception}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${aspnet-request-url}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${aspnet-mvc-action}
+2022-09-13 23:15:16.2695 Trace Closing DatabaseTarget(Name=dbTarget)
+2022-09-13 23:15:16.2695 Debug DatabaseTarget(Name=dbTarget): Closing...
+2022-09-13 23:15:16.2695 Trace DatabaseTarget(Name=dbTarget): Close connection because of CloseTarget
+2022-09-13 23:15:16.2695 Debug DatabaseTarget(Name=dbTarget): Closed.
+2022-09-13 23:15:16.2695 Trace Closing Data Source=localhost\SQLEXPRESS2019;Initial Catalog=Invitaciones;User ID=sa;Password=sql2019
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing insert into logs (Level,Fecha,Ipaddress,Userid,Logger,Callsite,RequestUrl,ReferrerUrl,Action,Message,Exception)          values (@levels,@operatingtime,@operatingaddress,@userid,@logger,@callSite,@requesturl,@referrerurl,@action,@message,@exception);
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing .
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2695 Trace Closing ${level}
+2022-09-13 23:15:16.2695 Trace Closing Layout Renderer: ${level}
+2022-09-13 23:15:16.2851 Trace Closing ${date:format=dd/MM/yyyy HH\:mm\:ss.fff}
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${date}
+2022-09-13 23:15:16.2851 Trace Closing ${aspnet-Request-IP}
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${aspnet-request-ip}
+2022-09-13 23:15:16.2851 Trace Closing X-Forwarded-For
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2851 Trace Closing 1
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${literal}
+2022-09-13 23:15:16.2851 Trace Closing ${logger}
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${loggername}
+2022-09-13 23:15:16.2851 Trace Closing ${callsite}
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${callsite}
+2022-09-13 23:15:16.2851 Trace Closing ${aspnet-request-url}
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${aspnet-request-url}
+2022-09-13 23:15:16.2851 Trace Closing ${aspnet-request}
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${aspnet-request}
+2022-09-13 23:15:16.2851 Trace Closing ${aspnet-mvc-action}
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${aspnet-mvc-action}
+2022-09-13 23:15:16.2851 Trace Closing ${message}
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${message}
+2022-09-13 23:15:16.2851 Trace Closing ${exception:tostring}
+2022-09-13 23:15:16.2851 Trace Closing Layout Renderer: ${exception}
+2022-09-13 23:15:16.2851 Debug Finished closing logging configuration.
+2022-09-13 23:15:16.2851 Debug Stopping file watching for path 'G:\Proyectos\PTI\invitaciones\MRE-Invitaciones\Front-end\bin\Debug\net6.0' filter 'NLog.config'
+2022-09-13 23:15:16.2851 Debug Targets not configured for Logger: Program
+2022-09-13 23:15:16.2851 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-09-13 23:15:16.2851 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-09-13 23:15:16.2851 Debug Targets not configured for Logger: Microsoft.Hosting.Lifetime
+2022-09-13 23:15:16.2851 Info Logger has been closed down.
+2022-09-13 23:15:16.3483 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2022-09-13 23:15:16.3992 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2022-09-13 23:15:16.3992 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2022-09-13 23:15:16.3992 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Query
+2022-09-13 23:15:16.3992 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2022-09-13 23:15:16.3992 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2022-09-13 23:15:16.4233 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Model
+2022-09-13 23:15:16.4233 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2022-09-13 23:15:17.2193 Debug Targets not configured for Logger: Microsoft.EntityFrameworkCore.Update

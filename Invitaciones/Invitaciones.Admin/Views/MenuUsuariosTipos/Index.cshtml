@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Invitaciones.Shared.Data.MenuUsuariosTipo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col">
+                <h3 class="card-title">Menú Tipo Usuario</h3>
+            </div>
+           @* <div class="col text-right">
+                <a class="btn btn-secondary" href="/menuusuariostipos/create">Agregar Nuevo</a>
+            </div>*@
+        </div>
+    </div>
+    <div class="card-body">
+         <div class="row">
+            <div class="col-md-12" id="partial">
+                @await Html.PartialAsync("~/Views/MenuUsuariosTipos/create.cshtml", new Invitaciones.Shared.Data.MenuUsuariosTipo())
+            </div>
+        </div>
+<table class="table" id="menu">
+    <thead>
+        <tr>
+            <th>Modificar</th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdMenuNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdUsuarioTipoNavigation)
+            </th>
+           @* <th></th>*@
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td><button onclick="edit(@item.IdMenuTipoUsuario)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="/MenuUsuariosTipos/DeleteConfirmed/@item.IdMenuTipoUsuario" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdMenuNavigation.MenuTitulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUsuarioTipoNavigation.UsuarioTipo)
+            </td>
+           @* <td>
+                <a asp-action="Edit" asp-route-id="@item.IdMenuTipoUsuario"><i class="fa fa-pen"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.IdMenuTipoUsuario"><i class="fas fa-eye"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdMenuTipoUsuario"><i class="fas fa-trash"></i></a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+</div>
+ @section Scripts {
+     <script> 
+     $( document ).ready(function() {
+       $('#menu').DataTable({
+              "paging": true,
+              "lengthChange": false,
+              "searching": true,
+              "ordering": true,
+              "info": false,
+              "autoWidth": false,
+              "responsive": true,
+              "language": {
+                "paginate": {
+                  "previous": "anterior",
+                   "next": "siguiente"
+                },
+                "search": "Filtrar:"
+              }
+            });
+    });
+       function edit (id) {  
+           $("#partial").load("@Url.Content("~")/MenuUsuariosTipos/edit/"+id);
+        } 
+ </script>
+ }
+
+
+   

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Invitaciones.Shared.Data.MenuUsuariosTipo>
+@{
+	Layout = null;
+}
+
+@foreach (var item in Model.Where(q => q.IdMenuNavigation.IdMenuSuperior == 0).OrderBy(o => o.IdMenuNavigation.Orden))
+{
+	var sm = Model.Where(q => q.IdMenuNavigation.IdMenuSuperior == item.IdMenu).ToList();
+	if (sm.Count == 0)
+	{
+		<li class="nav-item">
+			<a href="~/@item.IdMenuNavigation.Link" name="@item.IdMenuNavigation.Link" class="nav-link">
+				<i class="fas fa-circle nav-icon"></i>
+				<p>@item.IdMenuNavigation.MenuTitulo</p>
+			</a>
+		</li>
+	}
+	else
+	{
+		<li id="ms_@item.IdMenuNavigation.MenuTitulo" class="nav-item has-treeview">
+			<a href="#" class="nav-link ">
+				<i class="fas fa-circle nav-icon"></i>
+				<p>
+					@item.IdMenuNavigation.MenuTitulo
+					<i class="right fas fa-angle-left"></i>
+				</p>
+			</a>
+			<ul id="ul_@item.IdMenuNavigation.MenuTitulo" class="nav nav-treeview" style="display: none;">
+				@foreach (Invitaciones.Shared.Data.MenuUsuariosTipo item2 in sm.OrderBy(o => o.IdMenuNavigation.Orden))
+				{
+					<li class="nav-item">
+						<a href="~/@item2.IdMenuNavigation.Link" name="@item.IdMenuNavigation.MenuTitulo" class="nav-link ">
+							<i class="far fa-circle nav-icon"></i>
+							<p> @item2.IdMenuNavigation.MenuTitulo</p>
+						</a>
+					</li>
+				}
+
+
+			</ul>
+		</li>
+	}
+}

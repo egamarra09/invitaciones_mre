@@ -1,0 +1,30 @@
+﻿@model Invitaciones.Shared.Data.MenuUsuariosTipo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="card ">
+<div class="card-header">
+    <h3 class="card-title">Menú Tipo Usuario</h3>
+</div>
+    <dl class="card-body">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdMenuNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdMenuNavigation.MenuTitulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdUsuarioTipoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdUsuarioTipoNavigation.UsuarioTipo)
+        </dd>
+        <div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.IdMenuTipoUsuario">Editar</a> |
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</div>
+    </dl>
+</div>
+

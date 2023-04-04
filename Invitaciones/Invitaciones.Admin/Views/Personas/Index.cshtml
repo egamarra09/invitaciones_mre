@@ -1,0 +1,152 @@
+﻿@model IEnumerable<Invitaciones.Shared.Data.Persona>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col">
+                <h3 class="card-title">Personas</h3>
+            </div>
+           @* <div class="col text-right">
+                <a class="btn btn-secondary" href="/menus/create">Agregar Nuevo</a>
+            </div>*@
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12" id="partial">
+                @await Html.PartialAsync("~/Views/Personas/create.cshtml", new Invitaciones.Shared.Data.Persona())
+            </div>
+        </div>
+          <div class="row mt-3 mb-3">
+            @*<div class="col-md-6">
+                <input type="text" id="usuario" name="usuario" placeholder="Filtrar " autocomplete="off" class="form-control" />
+            </div>*@
+        </div>
+        <div class="table-responsive">
+            <table id="tbUsuarios" class="table ">
+                 <thead>
+                    <tr>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.IdGrupo)
+                        </th>*@
+                        <th>&nbsp;</th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IdInstitucion)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Telefono)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Celular)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Cargo)
+                        </th>
+                        @*<th></th>*@
+                    </tr>
+                </thead>
+                    <tbody>
+                @foreach (var item in Model) {
+                        <tr>
+                          @*  <td>
+                                @Html.DisplayFor(modelItem => item.IdGrupo)
+                            </td>*@
+                          
+                                 <td><button onclick="edit(@item.IdInvitado)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="/Personas/DeleteConfirmed/@item.IdInvitado" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
+                            
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IdInstitucionNavigation.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Telefono)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Celular)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cargo)
+                            </td>
+                           @* <td>
+                                <a asp-action="Edit" asp-route-id="@item.IdInvitado">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.IdInvitado">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.IdInvitado">Delete</a>
+                            </td>*@
+                        </tr>
+                }
+                    </tbody>
+                </table>
+        </div>
+
+</div>
+</div>
+ @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+         $(document).ready(function(){
+          $("#usuario").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tbUsuarios tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+           $('#tbUsuarios').DataTable({
+              "paging": true,
+              "lengthChange": false,
+              "searching": true,
+              "ordering": true,
+              "info": false,
+              "autoWidth": false,
+              "responsive": true,
+              "language": {
+                "paginate": {
+                  "previous": "anterior",
+                   "next": "siguiente"
+                },
+                "search": "Filtrar:"
+              }
+            });
+           
+        });
+    </script>
+    
+}
+ <script>  
+       function edit (id) {  
+           $("#partial").load("@Url.Content("~")/Personas/edit/"+id);
+       }
+function grupos() {
+    inst_id = $('#IdInstitucion').val();
+                var items = '';
+                    $('#IdGrupo').empty();
+                $.ajax({
+                    type: "GET",
+                    url: "@Url.Content("~")/Grupos/Grupos",
+                    data: { id: inst_id },
+                    dataType: "json",
+                    success: function (data) {
+                        $.each(data, function (k, option) {
+                           items += "<option value = '" + option.idGrupo + "'>" + option.nombre + " </option>";
+                        });
+                        $('#IdGrupo').html(items);
+                    }
+                });
+}
+ </script>  
+
+

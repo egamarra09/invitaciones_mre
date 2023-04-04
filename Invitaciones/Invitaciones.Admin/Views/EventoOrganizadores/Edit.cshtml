@@ -1,0 +1,42 @@
+﻿@model Invitaciones.Shared.Data.EventoOrganizadore
+
+@{
+    ViewData["Title"] = "Edit";
+}
+@*<div class="card ">*@
+@*<div class="card-header">
+    <h3 class="card-title">Menú</h3>
+</div>*@
+        <form asp-action="Edit">
+            <div class="row">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="IdOrganizador" />
+               <div class="form-group col-md-8">
+                    <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" required />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                
+                <div class="align-bottom col-md-12">
+                    <div class="form-group col-md-6 form-check ">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Activo" /> @Html.DisplayNameFor(model => model.Activo)
+                        </label>
+                     </div>
+                </div>
+                 <div class="card-footer">
+                     <input type="submit" value="Guardar" class="btn btn-primary" />
+                     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+               </div>
+            </div>
+        </form>
+    @*</div>*@
+
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

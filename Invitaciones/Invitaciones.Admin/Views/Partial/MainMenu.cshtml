@@ -1,0 +1,50 @@
+﻿@*@model IEnumerable<MRE_Invitaciones.Data.MenuUsuariosTipo>*@
+@{
+	Layout = null;
+	var m = Model as List<Invitaciones.Shared.Data.MenuUsuariosTipo>;
+}
+@foreach (Invitaciones.Shared.Data.MenuUsuariosTipo item in m)
+{
+	var sm = m.Where(q => q.IdMenuNavigation.IdMenuSuperior == item.IdMenu).ToList();
+	if (sm == null)
+	{
+		<li class="nav-item">
+			<a href="@item.IdMenuNavigation.Link" class="nav-link">
+				<i class="fas fa-circle nav-icon"></i>
+				<p>@item.IdMenuNavigation.MenuTitulo</p>
+			</a>
+		</li>
+	}
+	else
+	{
+		<ul data-widget="treeview">
+			<li><a href="#">One Level</a></li>
+			<li class="treeview">
+				<a href="#">Multilevel</a>
+				<ul class="treeview-menu">
+					<li><a href="#">Level 2</a></li>
+				</ul>
+			</li>
+		</ul>
+	}
+
+}
+
+@*  <li class="nav-item">
+            <a href="/menuusuariostipos" class="nav-link">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>Menú Tipo Usuario</p>
+            </a>
+          </li>
+         <li class="nav-item">
+            <a href="/usuarios" class="nav-link">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>Usuarios</p>
+            </a>
+          </li>
+         <li class="nav-item">
+            <a href="/usuariostipo" class="nav-link">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>Usuarios Tipo</p>
+            </a>
+          </li>*@

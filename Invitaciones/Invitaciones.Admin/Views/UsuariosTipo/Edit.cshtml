@@ -1,0 +1,34 @@
+﻿@model Invitaciones.Shared.Data.UsuariosTipo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+@*
+<div class="card ">*@
+@*<div class="card-header">
+    <h3 class="card-title">Usuario Tipo</h3>
+</div>*@
+        <form asp-action="Edit">
+         <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdUsuarioTipo" />
+            <div class="form-group col-md-6">
+                <label asp-for="UsuarioTipo" class="control-label"></label>
+                <input asp-for="UsuarioTipo" class="form-control" required />
+                <span asp-validation-for="UsuarioTipo" class="text-danger"></span>
+            </div>
+            <div class="card-footer col-md-12">
+                                 <input type="submit" value="Guardar" class="btn btn-primary" />
+                                 <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+             </div>
+         </div>
+        </form>
+        
+    @*</div>*@
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

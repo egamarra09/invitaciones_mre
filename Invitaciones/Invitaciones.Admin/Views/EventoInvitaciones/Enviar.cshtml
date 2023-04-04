@@ -1,0 +1,51 @@
+﻿@model Invitaciones.Shared.Data.EventoInvitacione
+
+    <form asp-action="Enviar">
+        <div class="container">
+            <div class="row justify-content-md-center">
+               <input type="hidden" asp-for="IdInvitacion" value="@Model.IdInvitacion" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="col-md-12 text-center">
+                    <img src="/dist/img/logo_invitaciones.png" class="image-responsive" />
+                </div>
+                <div class=" col-md-12 text-center mt-3">
+                    <h3>@Html.Raw(Model.Remitente)</h3>
+                </div>
+                <div class=" col-md-12 text-center">
+                   <p> @Html.Raw(Model.Saludo)</p>
+                </div>
+               <div class=" col-md-12 text-center">
+                   <h3>
+                       <p>Nombre Invitado</p>
+                   
+                   </h3>
+                </div>
+                <div class=" col-md-12 text-center">
+                   
+                    @Html.Raw(Model.Motivo)
+                  
+                </div>
+                <div class=" col-md-12 text-center">
+                   
+                    @Html.Raw(Model.Fecha)
+                  
+                </div>
+                <div class=" col-md-6 text-left">
+                   
+                    @Html.Raw(Model.Lugar)
+                    <br />
+                   @Html.Raw(Model.Direccion)
+                   <br />
+                    @Html.Raw(Model.Tenida)
+                </div>
+                 <div class=" col-md-6 text-right">
+                   
+                    @Html.Raw(Model.TextConf)
+                   
+                </div>
+                <div class="col-md-12">
+                     <input type="submit" value="Enviar" class="btn btn-primary" />
+                </div>
+                </div>
+        </div>   
+        </form>
