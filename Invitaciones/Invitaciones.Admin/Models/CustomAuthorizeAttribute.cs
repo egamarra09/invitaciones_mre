@@ -41,7 +41,7 @@ namespace Invitaciones.Admin.Models
 			//	return;
 			//}
 
-			var usuario = user.Identity.Name.Split("\\")[1].Replace("dablo","edgar");
+			var usuario = user.Identity.Name.Split("\\")[1];
 			var dbContext = context.HttpContext.RequestServices.GetService(typeof(InvitacionesContext)) as InvitacionesContext;
 			var u = dbContext.Usuarios.Where(q => q.Login == usuario).FirstOrDefault();
 			if (u == null)
