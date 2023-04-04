@@ -24,8 +24,8 @@ namespace Invitaciones.Admin.Controllers
         // GET: Personas
         public async Task<IActionResult> Index()
         {
-            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones, "IdInstitucion", "Nombre");
-            ViewData["IdGrupo"] = new SelectList(_context.Grupos, "IdGrupo", "Nombre");
+            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones.Where(q => q.Activo), "IdInstitucion", "Nombre");
+            ViewData["IdGrupo"] = new SelectList(_context.Grupos.Where(q => q.Activo), "IdGrupo", "Nombre");
             return View(await _context.Personas.ToListAsync());
         }
 
@@ -50,8 +50,8 @@ namespace Invitaciones.Admin.Controllers
         // GET: Personas/Create
         public IActionResult Create()
         {
-            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones, "IdInstitucion", "Nombre");
-            ViewData["IdGrupo"] = new SelectList(_context.Grupos, "IdGrupo", "Nombre");
+            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones.Where(q => q.Activo), "IdInstitucion", "Nombre");
+            ViewData["IdGrupo"] = new SelectList(_context.Grupos.Where(q => q.Activo), "IdGrupo", "Nombre");
             return View();
         }
 
@@ -95,8 +95,8 @@ namespace Invitaciones.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones, "IdInstitucion", "Nombre", persona.IdInstitucion);
-            ViewData["IdGrupo"] = new SelectList(_context.Grupos.Where(q=>q.IdInstitucion==persona.IdInstitucion), "IdGrupo", "Nombre");
+            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones.Where(q => q.Activo), "IdInstitucion", "Nombre", persona.IdInstitucion);
+            ViewData["IdGrupo"] = new SelectList(_context.Grupos.Where(q => q.Activo).Where(q=>q.IdInstitucion==persona.IdInstitucion), "IdGrupo", "Nombre");
             return PartialView(persona);
         }
 
@@ -160,17 +160,29 @@ namespace Invitaciones.Admin.Controllers
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Personas == null)
+            try
             {
-                return Problem("Entity set 'InvitacionesContext.Personas'  is null.");
+                if (_context.Personas == null)
+                {
+                    return Problem("Entity set 'InvitacionesContext.Personas'  is null.");
+                }
+                var persona = await _context.Personas.FindAsync(id);
+                if (persona != null)
+                {
+                    _context.Personas.Remove(persona);
+                }
+
+                await _context.SaveChangesAsync();
+
+
             }
-            var persona = await _context.Personas.FindAsync(id);
-            if (persona != null)
+            catch (Exception ex)
             {
-                _context.Personas.Remove(persona);
+                _logger.LogError(ex, ex.Message);
+                return RedirectToAction(nameof(Index));
             }
-            
-            await _context.SaveChangesAsync();
+
+           
             return RedirectToAction(nameof(Index));
         }
 

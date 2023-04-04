@@ -34,9 +34,9 @@ namespace Invitaciones.Admin.Controllers
 			var invitacionesContext = _context.Eventos.Include(e => e.IdCategoriaNavigation).Include(e => e.IdOrganizadorNavigation).Include(e => e.IdTipoNavigation).OrderByDescending(o=>o.IdEvento);
 			try
 			{
-				ViewData["IdCategoria"] = new SelectList(_context.EventoCategorias, "IdCategoria", "Nombre");
-				ViewData["IdOrganizador"] = new SelectList(_context.EventoOrganizadores, "IdOrganizador", "Nombre");
-				ViewData["IdTipo"] = new SelectList(_context.EventoTipos, "IdTipo", "Tipo");
+				ViewData["IdCategoria"] = new SelectList(_context.EventoCategorias.Where(q=>q.Activo), "IdCategoria", "Nombre");
+				ViewData["IdOrganizador"] = new SelectList(_context.EventoOrganizadores.Where(q => q.Activo), "IdOrganizador", "Nombre");
+				ViewData["IdTipo"] = new SelectList(_context.EventoTipos.Where(q => q.Activo), "IdTipo", "Tipo");
 				ViewData["Formato"] = new SelectList(_repository.FormatoEventos(), "Value", "Text");
 				ViewData["zonaHoraria"] = new SelectList(_repository.zonaHoraria(), "Value", "Text");
 				//_logger.LogInformation("");
@@ -76,9 +76,9 @@ namespace Invitaciones.Admin.Controllers
 			//var j= new List<UploadItem>();
 			//TempData["uploadItems"] = j;
 			//HttpContext.Session.Set<DateTime>(SessionKeyTime, currentTime);
-			ViewData["IdCategoria"] = new SelectList(_context.EventoCategorias, "IdCategoria", "Nombre");
-			ViewData["IdOrganizador"] = new SelectList(_context.EventoOrganizadores, "IdOrganizador", "Nombre");
-			ViewData["IdTipo"] = new SelectList(_context.EventoTipos, "IdTipo", "Tipo");
+			ViewData["IdCategoria"] = new SelectList(_context.EventoCategorias.Where(q => q.Activo), "IdCategoria", "Nombre");
+			ViewData["IdOrganizador"] = new SelectList(_context.EventoOrganizadores.Where(q => q.Activo), "IdOrganizador", "Nombre");
+			ViewData["IdTipo"] = new SelectList(_context.EventoTipos.Where(q => q.Activo), "IdTipo", "Tipo");
 			ViewData["Formato"] = new SelectList(_repository.FormatoEventos(), "Value", "Text");
 			ViewData["zonaHoraria"] = new SelectList(_repository.zonaHoraria(), "Value", "Text");
 			ViewData["Repetir"] = new SelectList(_repository.RepetirItems(), "Value", "Text");
@@ -132,9 +132,9 @@ namespace Invitaciones.Admin.Controllers
 		//[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Create(/*[Bind("IdEvento,IdOrganizador,IdCategoria,Evento1,FechaDesde,FechaHasta,Latitud,Longitug,ZonaHoraria,Formato,LimitePersonas,HoraDesde,HoraHasta,Descripcion,Activo,FechaCreacion,UltimaModificacion")]*/ Evento evento, IFormFile Imagen, IFormCollection fc)
 		{
-			ViewData["IdCategoria"] = new SelectList(_context.EventoCategorias, "IdCategoria", "Nombre");
-			ViewData["IdOrganizador"] = new SelectList(_context.EventoOrganizadores, "IdOrganizador", "Nombre");
-			ViewData["IdTipo"] = new SelectList(_context.EventoTipos, "IdTipo", "Tipo");
+			ViewData["IdCategoria"] = new SelectList(_context.EventoCategorias.Where(q => q.Activo), "IdCategoria", "Nombre");
+			ViewData["IdOrganizador"] = new SelectList(_context.EventoOrganizadores.Where(q => q.Activo), "IdOrganizador", "Nombre");
+			ViewData["IdTipo"] = new SelectList(_context.EventoTipos.Where(q => q.Activo), "IdTipo", "Tipo");
 			ViewData["Formato"] = new SelectList(_repository.FormatoEventos(), "Value", "Text");
 			ViewData["Repetir"] = new SelectList(_repository.RepetirItems(), "Value", "Text");
 			ViewData["zonaHoraria"] = new SelectList(_repository.zonaHoraria(), "Value", "Text");
@@ -257,9 +257,9 @@ namespace Invitaciones.Admin.Controllers
 		//[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Edit(int id, /*[Bind("IdEvento,IdOrganizador,IdCategoria,Evento1,FechaDesde,FechaHasta,Latitud,Longitug,ZonaHoraria,Formato,LimitePersonas,HoraDesde,HoraHasta,Descripcion,Activo,FechaCreacion,UltimaModificacion")]*/ Evento evento, IFormFile Imagen, IFormCollection fc)
 		{
-			ViewData["IdCategoria"] = new SelectList(_context.EventoCategorias, "IdCategoria", "Nombre");
-			ViewData["IdOrganizador"] = new SelectList(_context.EventoOrganizadores, "IdOrganizador", "Nombre");
-			ViewData["IdTipo"] = new SelectList(_context.EventoTipos, "IdTipo", "Tipo");
+			ViewData["IdCategoria"] = new SelectList(_context.EventoCategorias.Where(q => q.Activo), "IdCategoria", "Nombre");
+			ViewData["IdOrganizador"] = new SelectList(_context.EventoOrganizadores.Where(q => q.Activo), "IdOrganizador", "Nombre");
+			ViewData["IdTipo"] = new SelectList(_context.EventoTipos.Where(q => q.Activo), "IdTipo", "Tipo");
 			ViewData["Formato"] = new SelectList(_repository.FormatoEventos(), "Value", "Text");
 			ViewData["Repetir"] = new SelectList(_repository.RepetirItems(), "Value", "Text");
 			ViewData["zonaHoraria"] = new SelectList(_repository.zonaHoraria(), "Value", "Text");
@@ -382,17 +382,29 @@ namespace Invitaciones.Admin.Controllers
 		//[ValidateAntiForgeryToken]
 		public async Task<IActionResult> DeleteConfirmed(int id)
 		{
-			if (_context.Eventos == null)
+			try
 			{
-				return Problem("Entity set 'InvitacionesContext.Eventos'  is null.");
+
+				if (_context.Eventos == null)
+				{
+					return Problem("Entity set 'InvitacionesContext.Eventos'  is null.");
+				}
+				var evento = await _context.Eventos.FindAsync(id);
+				if (evento != null)
+				{
+					_context.Eventos.Remove(evento);
+				}
+
+				await _context.SaveChangesAsync();
+
 			}
-			var evento = await _context.Eventos.FindAsync(id);
-			if (evento != null)
+			catch (Exception ex)
 			{
-				_context.Eventos.Remove(evento);
+				_logger.LogError(ex, ex.Message);
+				return RedirectToAction(nameof(Index));
 			}
 
-			await _context.SaveChangesAsync();
+			
 			return RedirectToAction(nameof(Index));
 		}
 

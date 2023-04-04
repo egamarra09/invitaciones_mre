@@ -62,7 +62,7 @@
                                 @Html.DisplayFor(modelItem => item.IdGrupo)
                             </td>*@
                           
-                                 <td><button onclick="edit(@item.IdInvitado)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="/Personas/DeleteConfirmed/@item.IdInvitado" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
+                                 <td><button onclick="edit(@item.IdInvitado)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="@Url.Content("~")/Personas/DeleteConfirmed/@item.IdInvitado" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
                             
                             <td>
                                 @Html.DisplayFor(modelItem => item.IdInstitucionNavigation.Nombre)
@@ -129,6 +129,7 @@
  <script>  
        function edit (id) {  
            $("#partial").load("@Url.Content("~")/Personas/edit/"+id);
+            window.scrollTo(0,0);
        }
 function grupos() {
     inst_id = $('#IdInstitucion').val();

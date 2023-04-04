@@ -47,7 +47,7 @@
                     @foreach (var item in Model) {
                             <tr>
                                 <td>
-                                      <td><button onclick="edit(@item.IdGrupo)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="/Grupos/DeleteConfirmed/@item.IdGrupo" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
+                                      <td><button onclick="edit(@item.IdGrupo)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="@Url.Content("~")/Grupos/DeleteConfirmed/@item.IdGrupo" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Nombre)
@@ -88,5 +88,6 @@
  <script>  
        function edit (id) {  
            $("#partial").load("@Url.Content("~")/Grupos/edit/"+id);
+            window.scrollTo(0,0);
         } 
  </script>  

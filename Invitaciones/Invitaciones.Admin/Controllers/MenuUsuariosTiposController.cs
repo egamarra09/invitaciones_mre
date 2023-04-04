@@ -186,17 +186,29 @@ namespace Invitaciones.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.MenuUsuariosTipos == null)
+            try
             {
-                return Problem("Entity set 'InvitacionesContext.MenuUsuariosTipos'  is null.");
+                if (_context.MenuUsuariosTipos == null)
+                {
+                    return Problem("Entity set 'InvitacionesContext.MenuUsuariosTipos'  is null.");
+                }
+                var menuUsuariosTipo = await _context.MenuUsuariosTipos.FindAsync(id);
+                if (menuUsuariosTipo != null)
+                {
+                    _context.MenuUsuariosTipos.Remove(menuUsuariosTipo);
+                }
+
+                await _context.SaveChangesAsync();
+
+
             }
-            var menuUsuariosTipo = await _context.MenuUsuariosTipos.FindAsync(id);
-            if (menuUsuariosTipo != null)
+            catch (Exception ex)
             {
-                _context.MenuUsuariosTipos.Remove(menuUsuariosTipo);
+                _logger.LogError(ex, ex.Message);
+                return RedirectToAction(nameof(Index));
             }
-            
-            await _context.SaveChangesAsync();
+
+          
             return RedirectToAction(nameof(Index));
         }
 

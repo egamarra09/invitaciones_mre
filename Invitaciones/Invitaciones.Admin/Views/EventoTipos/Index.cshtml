@@ -44,7 +44,7 @@
                 <tbody>
                 @foreach (var item in Model) {
                         <tr>
-                            <td><button onclick="edit(@item.IdTipo)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="/EventoTipos/DeleteConfirmed/@item.IdTipo" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
+                            <td><button onclick="edit(@item.IdTipo)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="@Url.Content("~")/EventoTipos/DeleteConfirmed/@item.IdTipo" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
                            <td>
                                 @Html.DisplayFor(modelItem => item.Tipo)
                             </td>
@@ -81,5 +81,6 @@
  <script>  
        function edit (id) {  
            $("#partial").load("@Url.Content("~")/EventoTipos/edit/"+id);
+            window.scrollTo(0,0);
         } 
  </script>  

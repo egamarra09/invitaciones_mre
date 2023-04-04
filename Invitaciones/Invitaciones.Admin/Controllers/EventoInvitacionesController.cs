@@ -36,14 +36,14 @@ namespace Invitaciones.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             //ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "Evento1");
-            ViewData["Eventos"] = _context.Eventos.ToList();
-            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones, "IdInstitucion", "Nombre");
+            ViewData["Eventos"] = _context.Eventos.Where(q => q.Activo).ToList();
+            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones.Where(q => q.Activo), "IdInstitucion", "Nombre");
             return View(await _context.EventoInvitaciones.ToListAsync());
         }
 
         public async Task<IActionResult> Reporte(int id=0)
         {
-            ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "Evento1");
+            ViewData["IdEvento"] = new SelectList(_context.Eventos.Where(q => q.Activo), "IdEvento", "Evento1");
             //ViewData["Eventos"] = _context.Eventos.ToList();
             //ViewData["IdInstitucion"] = new SelectList(_context.Instituciones, "IdInstitucion", "Nombre");
             return View(await _context.EventoInvitaciones.Where(q=>q.IdInvitacion==id).FirstOrDefaultAsync());
@@ -70,7 +70,7 @@ namespace Invitaciones.Admin.Controllers
         // GET: EventoInvitaciones/Create
         public IActionResult Create()
         {
-            ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "Evento1");
+            ViewData["IdEvento"] = new SelectList(_context.Eventos.Where(q => q.Activo), "IdEvento", "Evento1");
             return View();
         }
 
@@ -94,9 +94,9 @@ namespace Invitaciones.Admin.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
 
-            ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "Evento1");
+            ViewData["IdEvento"] = new SelectList(_context.Eventos.Where(q => q.Activo), "IdEvento", "Evento1");
             //ViewData["Eventos"] = _context.Eventos.ToList();
-            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones, "IdInstitucion", "Nombre");
+            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones.Where(q => q.Activo), "IdInstitucion", "Nombre");
             if (id == null || _context.EventoInvitaciones == null)
             {
                 return NotFound();
@@ -280,9 +280,9 @@ namespace Invitaciones.Admin.Controllers
                 return NotFound();
             }
 
-            ViewData["IdEvento"] = new SelectList(_context.Eventos, "IdEvento", "Evento1");
+            ViewData["IdEvento"] = new SelectList(_context.Eventos.Where(q => q.Activo), "IdEvento", "Evento1");
             //ViewData["Eventos"] = _context.Eventos.ToList();
-            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones, "IdInstitucion", "Nombre");
+            ViewData["IdInstitucion"] = new SelectList(_context.Instituciones.Where(q => q.Activo), "IdInstitucion", "Nombre");
             if (ModelState.IsValid)
             {
                 try
@@ -381,7 +381,7 @@ namespace Invitaciones.Admin.Controllers
 
         public JsonResult Personas(int id)
         {
-            var list = _context.Personas.Where(q => q.IdInstitucion == id).Select(x => new { id = x.IdInvitado, nombre = x.Nombre, cargo=x.Cargo, institucion=x.IdInstitucionNavigation.Nombre, grupo=x.IdGrupoNavigation.Nombre});
+            var list = _context.Personas.Where(q => q.IdInstitucion == id && q.Activo==true).Select(x => new { id = x.IdInvitado, nombre = x.Nombre, cargo=x.Cargo, institucion=x.IdInstitucionNavigation.Nombre, grupo=x.IdGrupoNavigation.Nombre});
             return Json(list);
         }
 

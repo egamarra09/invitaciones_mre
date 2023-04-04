@@ -89,7 +89,7 @@ label.error {
                 <tbody>
                 @foreach (var item in Model) {
                         <tr>
-                            <td><button onclick="edit(@item.IdEvento,@item.Latitud, @item.Longitud)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="eventos/DeleteConfirmed/@item.IdEvento" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
+                            <td><button onclick="edit(@item.IdEvento,@item.Latitud, @item.Longitud)" class="btn btn-secondary"><i class="fa fa-pen"></i></button>&nbsp;<a class="remove btn btn-secondary" href="@Url.Content("~")/eventos/DeleteConfirmed/@item.IdEvento" onclick="return confirm('¿Eliminar registro?')" ><i class="fa fa-trash"></i></a></td>
                             <td>
                                     @Html.DisplayFor(modelItem => item.Evento1)
                                 </td>

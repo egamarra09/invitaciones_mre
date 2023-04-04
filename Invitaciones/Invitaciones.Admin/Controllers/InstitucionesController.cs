@@ -14,10 +14,11 @@ namespace Invitaciones.Admin.Controllers
     public class InstitucionesController : Controller
     {
         private readonly InvitacionesContext _context;
-
-        public InstitucionesController(InvitacionesContext context)
+        private readonly ILogger<EventoOrganizadoresController> _logger;
+        public InstitucionesController(InvitacionesContext context, ILogger<EventoOrganizadoresController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: Instituciones
@@ -140,17 +141,29 @@ namespace Invitaciones.Admin.Controllers
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Instituciones == null)
+            try
             {
-                return Problem("Entity set 'InvitacionesContext.Instituciones'  is null.");
+
+                if (_context.Instituciones == null)
+                {
+                    return Problem("Entity set 'InvitacionesContext.Instituciones'  is null.");
+                }
+                var institucione = await _context.Instituciones.FindAsync(id);
+                if (institucione != null)
+                {
+                    _context.Instituciones.Remove(institucione);
+                }
+
+                await _context.SaveChangesAsync();
+
             }
-            var institucione = await _context.Instituciones.FindAsync(id);
-            if (institucione != null)
+            catch (Exception ex)
             {
-                _context.Instituciones.Remove(institucione);
+                _logger.LogError(ex, ex.Message);
+                return RedirectToAction(nameof(Index));
             }
+
             
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 

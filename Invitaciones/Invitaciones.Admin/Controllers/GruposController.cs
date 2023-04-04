@@ -16,10 +16,12 @@ namespace Invitaciones.Admin.Controllers
     public class GruposController : Controller
     {
         private readonly InvitacionesContext _context;
+        private readonly ILogger<EventoOrganizadoresController> _logger;
 
-        public GruposController(InvitacionesContext context)
+        public GruposController(InvitacionesContext context, ILogger<EventoOrganizadoresController> logger)
         {
             _context = context;
+            _logger = logger;   
         }
 
         // GET: Grupos
@@ -150,17 +152,29 @@ namespace Invitaciones.Admin.Controllers
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Grupos == null)
+            try
             {
-                return Problem("Entity set 'InvitacionesContext.Grupos'  is null.");
+                if (_context.Grupos == null)
+                {
+                    return Problem("Entity set 'InvitacionesContext.Grupos'  is null.");
+                }
+                var grupo = await _context.Grupos.FindAsync(id);
+                if (grupo != null)
+                {
+                    _context.Grupos.Remove(grupo);
+                }
+
+                await _context.SaveChangesAsync();
+
+
             }
-            var grupo = await _context.Grupos.FindAsync(id);
-            if (grupo != null)
+            catch (Exception ex)
             {
-                _context.Grupos.Remove(grupo);
+                _logger.LogError(ex, ex.Message);
+                return RedirectToAction(nameof(Index));
             }
+
             
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
